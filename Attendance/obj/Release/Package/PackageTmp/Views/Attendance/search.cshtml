@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "SEARCH AND REPORT";
+}
+
+<h2>SEARCH DB</h2>
+
+@using (Html.BeginForm("search22", "Attendance"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    <div> 
+        اختار التاريخ   @Html.TextBox("employeecode", "", new { @autocomplete = "off" })
+    </div>
+    <div>
+      ادخل كود الموظف  @Html.TextBox("employeecode2", "", new { @autocomplete = "off" })
+    </div>
+
+
+
+
+        <input type="submit" value="search" />
+  
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    $("#employeecode12").val("الأصول والأستثمار");
+
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#employeecode").datepicker({
+
+            dateFormat: "Mdyy"
+        });
+    });
+</script>

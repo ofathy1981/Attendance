@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZKAccessModel22StoreContainer" CdmEntityContainer="othrZKAccessEntities4">
+    <EntitySetMapping Name="otherts">
+      <EntityTypeMapping TypeName="ZKAccessModel22.othert">
+        <MappingFragment StoreEntitySet="othert">
+          <ScalarProperty Name="thedate2" ColumnName="thedate2" />
+          <ScalarProperty Name="thetime2" ColumnName="thetime2" />
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="device_name2" ColumnName="device_name2" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getothers" FunctionName="ZKAccessModel22.Store.getothers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ZKAccessModel22.getothers_Result">
+          <ScalarProperty Name="thedate2" ColumnName="thedate2" />
+          <ScalarProperty Name="thetime2" ColumnName="thetime2" />
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="device_name2" ColumnName="device_name2" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getoth" FunctionName="ZKAccessModel22.Store.getothers" />
+    <FunctionImportMapping FunctionImportName="gettheothers" FunctionName="ZKAccessModel22.Store.getothers" />
+  </EntityContainerMapping>
+</Mapping>

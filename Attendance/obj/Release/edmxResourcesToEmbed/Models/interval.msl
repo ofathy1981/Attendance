@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AttLoginModel1StoreContainer" CdmEntityContainer="AttLoginEntities1">
+    <EntitySetMapping Name="byintervals">
+      <EntityTypeMapping TypeName="AttLoginModel1.byinterval">
+        <MappingFragment StoreEntitySet="byinterval">
+          <ScalarProperty Name="thedate2" ColumnName="thedate2" />
+          <ScalarProperty Name="pin2" ColumnName="pin2" />
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="thetime1" ColumnName="thetime1" />
+          <ScalarProperty Name="thetime2" ColumnName="thetime2" />
+          <ScalarProperty Name="device_name1" ColumnName="device_name1" />
+          <ScalarProperty Name="device_name2" ColumnName="device_name2" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="thedate1" ColumnName="thedate1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getbyinterval" FunctionName="AttLoginModel1.Store.getbyinterval">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AttLoginModel1.getbyinterval_Result">
+          <ScalarProperty Name="pin2" ColumnName="pin2" />
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="thetime1" ColumnName="thetime1" />
+          <ScalarProperty Name="thetime2" ColumnName="thetime2" />
+          <ScalarProperty Name="device_name1" ColumnName="device_name1" />
+          <ScalarProperty Name="device_name2" ColumnName="device_name2" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="thedate1" ColumnName="thedate1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="byperiod" FunctionName="AttLoginModel1.Store.getbyinterval" />
+    <FunctionImportMapping FunctionImportName="getbyinterval2" FunctionName="AttLoginModel1.Store.getbyinterval2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AttLoginModel1.getbyinterval2_Result">
+          <ScalarProperty Name="pin2" ColumnName="pin2" />
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="thetime1" ColumnName="thetime1" />
+          <ScalarProperty Name="thetime2" ColumnName="thetime2" />
+          <ScalarProperty Name="device_name1" ColumnName="device_name1" />
+          <ScalarProperty Name="device_name2" ColumnName="device_name2" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="thedate1" ColumnName="thedate1" />
+          <ScalarProperty Name="thedate2" ColumnName="thedate2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getbyinterval22" FunctionName="AttLoginModel1.Store.getbyinterval2" />
+  </EntityContainerMapping>
+</Mapping>

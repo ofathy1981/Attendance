@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "الغياب";
+}
+
+<h2>  حضور الفتره باستخدام الكود الوظيفى</h2>
+
+
+@using (Html.BeginForm("byinterval", "byinter"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    <div>
+        اختر تاريخ الفتره
+        <br />        من @Html.TextBox("frominputdate", "", new { @autocomplete = "off" })
+
+        <br />الى           @Html.TextBox("toinputdate", "", new { @autocomplete = "off" })
+
+        <div>
+         ادخل رقم الموظف  @Html.TextBox("empcode", "", new { @autocomplete = "off" })
+        </div>
+        <br />  <input type="submit" value="search" />
+    </div>
+
+
+
+
+
+
+
+}
+
+<div>
+    <a href="/home/index">Back To Home</a>
+</div>
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#frominputdate").datepicker({
+
+            dateFormat: "yy-mm-dd"
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#toinputdate").datepicker({
+
+            dateFormat: "yy-mm-dd"
+        });
+    });
+</script>
+
+

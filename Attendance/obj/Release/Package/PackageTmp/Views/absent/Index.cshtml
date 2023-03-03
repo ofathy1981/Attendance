@@ -1,0 +1,135 @@
+﻿@model IEnumerable<Attendance.Models.absencev>
+<style>
+    #preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        background: #fff;
+    }
+
+    #ldr {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+</style>
+
+
+
+<div id="preloader">
+    <img src="~/Images/wait.gif" height="80" width="100" id="ldr" />
+</div>
+@{
+    ViewBag.Title = "نتيجة البحث ";
+}
+@{
+    string d1 = (string)System.Web.HttpContext.Current.Session["date1"];
+    string d2 = (string)System.Web.HttpContext.Current.Session["date2"];
+
+}
+@{ int i = 0;}
+
+<center>
+    <h2>    نتيجة البحث عن  غياب يوم  </h2>
+    <br />                 @d1
+
+</center>
+<style>
+    th, td {
+        padding: 15px;
+        text-align: right;
+        font-family: 'Arial Rounded MT';
+        font-weight: 500;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: black;
+        font-style: normal;
+    }
+
+    table {
+        font-size: 20px;
+        border: 1px solid black;
+    }
+</style>
+
+
+
+<table class="table table-striped">
+    <tr style="font-weight:200;color:black">
+        <th>
+            رقم الموظف
+        </th>
+        <th>
+            القطاعات
+        </th>
+        <th>
+            إسم الموظف
+        </th>
+        <th>مسلسل</th>
+
+    </tr>
+   @{
+
+    List<string> retired = new List<string>();
+    retired.Add("11918");
+    retired.Add("11375");
+    retired.Add("10422");
+    retired.Add("11462");    
+    
+    
+    }
+
+    @foreach (var item in Model.OrderBy(item => item.DEPTNAME).ThenBy(item => item.Name))
+    {
+        if (!retired.Contains(item.Badgenumber)) { 
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Badgenumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEPTNAME)
+
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+
+
+            </td>
+            <td>@{i++;}@i </td>
+
+        </tr>
+    }
+    }
+
+</table>
+<script>
+    jQuery(document).ready(function ($) {
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').fadeIn('slow', function () { });
+            }, -200000);
+
+
+
+        });
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').delay(1600).fadeOut('slow', function () { });
+            }, 20);
+
+
+
+        });
+    });
+</script>

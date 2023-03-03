@@ -1,0 +1,140 @@
+﻿@model IEnumerable<Attendance.Models.DailyAttendanceReport>
+@{
+    ViewBag.Title = "نتيجة البحث ";
+}
+
+@{
+    string p9 = (string)System.Web.HttpContext.Current.Session["entereddate"];
+    string p10 = (string)System.Web.HttpContext.Current.Session["ssector"];
+}
+@{
+    TimeSpan timelim = TimeSpan.Parse("08:30:00");
+}
+<br />
+@{ int i = 0;}
+<center>
+    <h2> تقرير الحضور عن يوم  </h2>
+
+    <h2>@p9</h2>  <h2>قطاع @p10</h2>
+</center>
+<style>
+    th, td {
+        padding: 15px;
+        text-align: right;
+        font-family: 'Arial Rounded MT';
+        font-weight: 500;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: black;
+        font-style:normal;
+    }
+
+    table {
+        font-size: 20px;
+        border: 1px solid black;
+    }
+    .bog {
+        background-imageurl('@Url.Content("~/Images/X.png")');
+        width: 10%;
+        height: 10%;
+
+    }
+</style>
+<table class="table table-striped">
+    <tr style="font-weight:200;color:black">
+      
+        <th>
+            التاخير
+
+        </th>
+        <th>
+            ماكينة الانصراف
+        </th>
+        <th>
+            وقت الانصراف
+        </th>
+        <th>
+            ماكينة الحضور
+
+          </th>
+        <th>
+            وقت الحضور
+        </th>
+        <th>
+            الاسم
+        </th>
+     <th>م</th>
+    </tr>
+
+    @foreach (var item in Model.OrderBy(item => item.Name))
+    {
+        <tr>
+            @if (item.thetime1 > timelim)
+{
+    <td  style="background:linear-gradient()">@{ var diff2 = item.thetime1 - timelim; } @diff2</td>
+}
+else
+{
+                <td></td>
+            }
+         
+@if (item.device_name2==null)
+{
+        <td ><img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png" ></td>
+
+}
+else { 
+            <td style="">
+                @Html.DisplayFor(modelItem => item.device_name2)
+
+
+            </td>}
+   
+        
+          @if (!item.thetime2.HasValue)
+{
+    <td ><img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png" ></td>
+}
+else
+{
+            <td>
+                @Html.DisplayFor(modelItem => item.thetime2)
+            </td>
+          }
+@if (item.device_name1 == null)
+{
+    <td>
+        <img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png">
+    </td>}
+         else{ 
+            <td>
+                @Html.DisplayFor(modelItem => item.device_name1)
+            </td>
+            }
+        
+@if (!item.thetime1.HasValue)
+{
+    <td >
+        <img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png">
+    </td>
+}
+else
+{
+    <td>
+                @Html.DisplayFor(modelItem => item.thetime1)
+            </td> 
+    
+}
+  
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>  @{i++;}@i </td>
+        </tr>
+    }
+
+</table>

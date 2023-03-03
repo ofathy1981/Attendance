@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="delaymodel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'ZKAccess.dbo.DELAY' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="DELAY">
+          <Property Name="pin" Type="nvarchar" MaxLength="50" />
+          <Property Name="thedate" Type="date" />
+          <Property Name="Name" Type="varchar" MaxLength="40" />
+          <Property Name="thetime" Type="time" Precision="7" />
+          <Property Name="Expr2" Type="int" />
+        </EntityType>-->
+  <Function Name="delay_count" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="delaymodelStoreContainer" />
+</Schema>

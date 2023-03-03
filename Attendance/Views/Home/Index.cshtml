@@ -1,0 +1,160 @@
+﻿@{
+    ViewBag.Title = "برنامج متابعة الحضور والانصراف";
+}
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <center><h1>@ViewBag.Title.</h1></center>
+
+            </hgroup>
+            <p>
+
+            </p>
+        </div>
+
+    </section>
+}
+<style>
+    .br {
+        border-radius: 5px;
+    }
+</style>
+
+<style>
+    .blinking {
+        animation: opacity 2s ease-in-out infinite;
+        opacity: 1;
+        border-radius: 5px;
+    }
+
+    @@keyframes opacity {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+
+
+<div class="container">
+    <div style="background-color:blue;color:white;font-weight:bold;"> OnLine BioMetric Attendance  Devices</div>
+    <div class="row">
+
+        @{ foreach (var device1 in ViewBag.successful)
+         {
+             if (device1 != null)
+             {
+                <div class=" col-3 border border-primary br" style="background:springgreen;border:5pt"><h1 style="font-size:medium;font-background:springgreen"> @device1 </h1></div>
+             }
+
+         }
+        }
+        <br />
+    </div>
+    <div style="background-color: blue; color: white; font-weight: bold;">OffLine BioMetric Attendance  Devices</div>
+    <div class="row">
+        @{ foreach (var device0 in ViewBag.failure)
+         {
+             if (device0 != null)
+             {
+                <div class=" col-3 border border-primary  blinking" style="background:red;border:5pt">
+                    <h1 style="font-size: medium"> @device0 </h1>
+                </div>
+             }
+         }
+        }
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <center><div> <h1> تقارير الحضور </h1></div></center>
+            <ol class="round">
+                <li>
+                    <button type="button" class="btn btn-success" style="width:190pt" onclick="location.href='@Url.Action("search", "dailyreport")'">   تقرير الحضور اليومى   باستخدام اسم القطاع</button>
+
+                </li>
+                <li>
+                    <button type="button" class="btn btn-success" style="width:190pt" onclick="location.href='@Url.Action("searchothers", "others")'">   إستـثـنــــاءات الحضور والانصراف</button>
+
+                </li>
+                <li>
+                    <button type="button" class="btn btn-success" style="width:190pt" onclick="location.href='@Url.Action("searchbyinterval", "byinter")'">   حضور موظف لفتره معينه</button>
+
+                </li>
+                <li>
+                    <button type="button" class="btn btn-success" style="width:190pt" onclick="location.href='@Url.Action("searchbyinterval3", "byinter")'">   حضور قطاع لفتره معينه</button>
+
+                </li>
+                <li>
+                    <button type="button" class="btn btn-success" style="width:190pt" onclick="location.href='@Url.Action("searchbyinterval2", "byinter")'">   حضور الجراج لفتره معينه</button>
+
+                </li>
+                <div class="col-md-12" style="background-color:#0ff"></div>
+                <li class="one">
+                    <button type="button" class="btn btn-primary" style="width:160pt" onclick="location.href='@Url.Action("search2", "attendance")'">   التقارير   باستخدام اسم القطاع</button>
+
+                </li>
+                <li class="two">
+                    <button type="button" class="btn btn-primary" style="width:160pt" onclick="location.href='@Url.Action("search3", "attendance")'">   التقارير   باستخدام اسم الماكينه </button>
+                </li>
+
+                <li class="three">
+                    <button type="button" class="btn btn-primary" style="width:160pt" onclick="location.href='@Url.Action("search", "attendance")'">  التقارير   باستخدام الكود الوظيفى</button>
+
+                </li>
+                <li class="four">
+                    <button type="button" class="btn btn-primary" style="width:160pt" onclick="location.href='@Url.Action("searchall", "attendance")'"> تقرير مجمع</button>
+
+                </li>
+            </ol>
+        </div>
+        <div class="col-md-4 j">
+            <center> <div> <h1> تقارير الغياب </h1></div></center>
+            <ol class="round">
+                <li>
+                    <button type="button" class="btn btn-primary" style="width:190pt" onclick="location.href='@Url.Action("searchabsence", "absent")'">   تقرير الغياب باستخدام التاريخ</button>
+
+                </li>
+                @*<li class="two">
+                        <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("search3", "attendance")'">   التقارير   باستخدام اسم الماكينه </button>
+                    </li>
+
+                    <li class="three">
+                        <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("search", "attendance")'">  التقارير   باستخدام الكود الوظيفى</button>
+
+                    </li>*@
+            </ol>
+        </div>
+        <div class="col-md-4 j">
+            <center> <div> <h1> جدول التاخير </h1></div></center>
+            <ol class="round">
+                <li>
+                    <button type="button" class="btn btn-success" style="width:190pt" onclick="location.href='@Url.Action("searchcumulative", "cumulative")'">   مجمع التاخيرات</button>
+
+                </li>
+                <li>
+                    <button type="button" class="btn btn-primary" style="width:190pt" onclick="location.href='@Url.Action("searchdelay", "delay")'">   تقرير التاخير باستخدام التاريخ</button>
+
+                </li>
+
+                @*<li class="two">
+                        <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("search3", "attendance")'">   التقارير   باستخدام اسم الماكينه </button>
+                    </li>
+
+                    <li class="three">
+                        <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("search", "attendance")'">  التقارير   باستخدام الكود الوظيفى</button>
+
+                    </li>*@
+            </ol>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AttLoginModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="byinterval">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="pin2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="thetime1" Type="Time" Precision="7" />
+    <Property Name="thetime2" Type="Time" Precision="7" />
+    <Property Name="device_name1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="device_name2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DEPTNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="thedate1" Type="DateTime" Precision="0" />
+    <Property Name="thedate2" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="AttLoginEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="byintervals" EntityType="Self.byinterval" />
+    <FunctionImport Name="getbyinterval" ReturnType="Collection(AttLoginModel1.getbyinterval_Result)">
+      <Parameter Name="frominputdate" Mode="In" Type="String" />
+      <Parameter Name="toinputdate" Mode="In" Type="String" />
+      <Parameter Name="empcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="byperiod" EntitySet="byintervals" ReturnType="Collection(AttLoginModel1.byinterval)">
+      <Parameter Name="frominputdate" Mode="In" Type="String" />
+      <Parameter Name="toinputdate" Mode="In" Type="String" />
+      <Parameter Name="empcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getbyinterval2" ReturnType="Collection(AttLoginModel1.getbyinterval2_Result)">
+      <Parameter Name="frominputdate" Mode="In" Type="String" />
+      <Parameter Name="toinputdate" Mode="In" Type="String" />
+      <Parameter Name="empcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getbyinterval22">
+      <Parameter Name="frominputdate" Mode="In" Type="String" />
+      <Parameter Name="toinputdate" Mode="In" Type="String" />
+      <Parameter Name="empcode" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="getbyinterval_Result">
+    <Property Type="String" Name="pin2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="pin" Nullable="true" MaxLength="50" />
+    <Property Type="Time" Name="thetime1" Nullable="true" />
+    <Property Type="Time" Name="thetime2" Nullable="true" />
+    <Property Type="String" Name="device_name1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="device_name2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DEPTNAME" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="40" />
+    <Property Type="Int64" Name="id" Nullable="false" />
+    <Property Type="DateTime" Name="thedate1" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getbyinterval2_Result">
+    <Property Type="String" Name="pin2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="pin" Nullable="true" MaxLength="50" />
+    <Property Type="Time" Name="thetime1" Nullable="true" />
+    <Property Type="Time" Name="thetime2" Nullable="true" />
+    <Property Type="String" Name="device_name1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="device_name2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DEPTNAME" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="40" />
+    <Property Type="Int64" Name="id" Nullable="false" />
+    <Property Type="DateTime" Name="thedate1" Nullable="true" />
+    <Property Type="DateTime" Name="thedate2" Nullable="true" />
+  </ComplexType>
+</Schema>

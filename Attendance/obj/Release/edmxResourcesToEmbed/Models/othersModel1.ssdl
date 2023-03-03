@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZKAccessModel22.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="othert">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="thedate2" Type="nvarchar(max)" />
+    <Property Name="thetime2" Type="time" Precision="7" />
+    <Property Name="pin" Type="nvarchar" MaxLength="50" />
+    <Property Name="device_name2" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPTNAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="Name" Type="varchar" MaxLength="40" />
+    <Property Name="id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Function Name="getothers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="the_inputdate" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="ZKAccessModel22StoreContainer">
+    <EntitySet Name="othert" EntityType="Self.othert" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AttLoginModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DailyAttendanceReport">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="pin" Type="nvarchar" MaxLength="50" />
+          <Property Name="thetime1" Type="time" Precision="7" />
+          <Property Name="thetime2" Type="time" Precision="7" />
+          <Property Name="device_name2" Type="nvarchar" MaxLength="50" />
+          <Property Name="thedate1" Type="nvarchar(max)" />
+          <Property Name="device_name1" Type="nvarchar" MaxLength="50" />
+          <Property Name="thedate2" Type="nvarchar(max)" />
+          <Property Name="DEPTNAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="Name" Type="varchar" MaxLength="40" />
+          <Property Name="id" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="AttLoginModelStoreContainer">
+          <EntitySet Name="DailyAttendanceReport" EntityType="Self.DailyAttendanceReport" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AttLoginModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DailyAttendanceReport">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="pin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="thetime1" Type="Time" Precision="7" />
+          <Property Name="thetime2" Type="Time" Precision="7" />
+          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="DEPTNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="device_name2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="thedate1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="device_name1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="thedate2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="AttLoginEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DailyAttendanceReports" EntityType="Self.DailyAttendanceReport" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AttLoginModelStoreContainer" CdmEntityContainer="AttLoginEntities">
+          <EntitySetMapping Name="DailyAttendanceReports">
+            <EntityTypeMapping TypeName="AttLoginModel.DailyAttendanceReport">
+              <MappingFragment StoreEntitySet="DailyAttendanceReport">
+                <ScalarProperty Name="thedate2" ColumnName="thedate2" />
+                <ScalarProperty Name="device_name1" ColumnName="device_name1" />
+                <ScalarProperty Name="thedate1" ColumnName="thedate1" />
+                <ScalarProperty Name="device_name2" ColumnName="device_name2" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pin" ColumnName="pin" />
+                <ScalarProperty Name="thetime1" ColumnName="thetime1" />
+                <ScalarProperty Name="thetime2" ColumnName="thetime2" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

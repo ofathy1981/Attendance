@@ -1,0 +1,50 @@
+﻿@model Attendance.Models.attendancev
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>attendancev</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmpID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmpID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EMPName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EMPName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SectorName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SectorName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.device_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.device_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.atttime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.atttime)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

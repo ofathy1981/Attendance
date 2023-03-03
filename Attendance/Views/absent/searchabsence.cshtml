@@ -1,0 +1,268 @@
+﻿@model IEnumerable<Attendance.Models.absencev>
+
+@{
+    ViewBag.Title = "الغياب";
+}
+@{
+    
+}
+<h2>الغياب</h2>
+@{
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+        {
+            Text = "الأصول والأستثمار",
+            Value = "الأصول والأستثمار"
+        });
+    listItems.Add(new SelectListItem
+        {
+            Text = "إدارة  الاصول والموازنات",
+            Value = "إدارة  الاصول والموازنات",
+        });
+    listItems.Add(new SelectListItem
+        {
+            Text = "القطاع المالى والمراجعه",
+            Value = "القطاع المالى والمراجعه",
+        });
+    listItems.Add(new SelectListItem
+        {
+            Text = "الشئون الهندسية",
+            Value = "الشئون الهندسية"
+        });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الامن",
+        Value = "الامن"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الخدمات",
+        Value = "الخدمات"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الرقابة الداخلية",
+        Value = "الرقابة الداخلية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الشئون التجارية",
+        Value = "الشئون التجارية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الشئون الطبية",
+        Value = "الشئون الطبية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "المعلومات",
+        Value = "المعلومات"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "AlexHI",
+        Value = "AlexHI"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "EGOTH",
+        Value = "EGOTH"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "ادارة الشركة والمتابعة",
+        Value = "ادارة الشركة والمتابعة"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "التدريب والمعاهد",
+        Value = "التدريب والمعاهد"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الجراج",
+        Value = "الجراج"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الرقابة على الفنادق",
+        Value = "الرقابة على الفنادق"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الشئون الادارية",
+        Value = "الشئون الادارية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "العلاقات العامة",
+        Value = "العلاقات العام"
+    });
+
+    listItems.Add(new SelectListItem
+    {
+        Text = "القانونى & العقود والشهر",
+        Value = "القانونى & العقود والشهر"
+    });
+
+    listItems.Add(new SelectListItem
+    {
+        Text = "القانونى&القضاياوالتنفيذ",
+        Value = "القانونى&القضاياوالتنفيذ"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "معاونى الخدمة",
+        Value = "معاونى الخدمة"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "معهد الأسكندرية",
+        Value = "معهد الأسكندرية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "معهد الاقصر",
+        Value = "معهد الاقصر"
+    });
+		listItems.Add(new SelectListItem
+    {
+        Text = "منطقة الاقصر",
+        Value = "منطقة الاقصر"
+    });
+        listItems.Add(new SelectListItem
+        {
+            Text = "أمن الأقصر",
+            Value = "أمن الأقصر"
+        });
+    listItems.Add(new SelectListItem
+    {
+        Text = "التخطيط والدراسات الاقتصادية",
+        Value = "التخطيط والدراسات الاقتصادية"
+    });
+	 listItems.Add(new SelectListItem
+	    {
+        Text = "الأسكندرية -القصر",
+        Value = "الأسكندرية -القصر"
+    });
+		listItems.Add(new SelectListItem
+	    {
+        Text = "معهد الاسكندرية",
+        Value = "معهد الاسكندرية"
+    });
+			listItems.Add(new SelectListItem
+	    {
+        Text = "أمن الأسكندرية",
+        Value = "أمن الأسكندرية"
+    });
+}
+
+@using (Html.BeginForm("absence", "absent"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    <div>
+        اختار التاريخ 
+<br/>        يوم @Html.TextBox("the_input_date1", "", new { @autocomplete = "off" })
+                        
+    <br/>          @Html.TextBox("the_input_date2", "", new { @autocomplete = "off" })
+        <div>
+            القطاعات التى تم اختيارها   @Html.DropDownList("depname", new SelectList(listItems, "Value", "Text"))
+        </div>
+        <div>
+            اختار القطاعات  @Html.TextBox("dept", "", new { @autocomplete = "off", @val = "الشئون الماليه" })
+        </div>
+        <br />  <input type="submit" value="search" />
+    </div>
+
+
+
+
+
+    
+
+}
+
+<div>
+    <a href="/home/index">Back To Home</a>
+</div>
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#the_input_date2").datepicker({
+
+            dateFormat: "yy-mm-dd 21:00:00.000"
+
+        });
+
+    });
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#the_input_date2").hide();
+
+        $("#the_input_date1").datepicker({
+
+            dateFormat: "yy-mm-dd 05:00:00.000"
+
+        });
+
+    });
+
+    $(document).ready(function () {
+    $("#the_input_date1").change(function () {
+        var s = $("#the_input_date1").val();
+        //var s = document.getElementById("the_input_date1").value;
+        var t = new Date(s);
+        var secn = new Date();
+        secn = t.setHours(t.getHours()+18);
+        var secns = secn.toString();
+        //document.getElementById("the_input_date2").value = secns;
+
+        let formatted_date = t.getFullYear() + "-" + (t.getMonth() + 1) + "-" + t.getDate() + " " + t.getHours() + ":" + t.getMinutes() + ":" + t.getSeconds()
+        document.getElementById("the_input_date2").value = formatted_date;
+        sessionStorage.setItem("the_input_date2", document.getElementById("the_input_date2").value);
+
+        console.log(formatted_date);
+        sessionStorage.setItem("the_input_date1", document.getElementById("the_input_date1").value);
+    });
+    document.getElementById("the_input_date1").value = sessionStorage.getItem("the_input_date1");
+    document.getElementById("the_input_date2").value = sessionStorage.getItem("the_input_date2");
+
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#depname').change(function () {
+            sessionStorage.setItem("dept", document.getElementById("depname").value);
+                    });
+        document.getElementById("dept").value = sessionStorage.getItem("dept");
+
+    });
+</script>
+<script>
+    $('#depname').change(function () {
+        var depname = $('#depname').val();
+        $("#dept").val(depname);
+    });
+
+</script>
+<script>
+    $("#dept").val($('#depname').val());
+
+
+</script>

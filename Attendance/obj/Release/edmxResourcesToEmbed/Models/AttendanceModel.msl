@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZKAccessModelStoreContainer" CdmEntityContainer="ZKAccessEntities2">
+    <EntitySetMapping Name="attendancevs">
+      <EntityTypeMapping TypeName="ZKAccessModel.attendancev">
+        <MappingFragment StoreEntitySet="attendancev">
+          <ScalarProperty Name="thetime" ColumnName="thetime" />
+          <ScalarProperty Name="thedate" ColumnName="thedate" />
+          <ScalarProperty Name="atttime" ColumnName="atttime" />
+          <ScalarProperty Name="device_name" ColumnName="device_name" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Badgenumber" ColumnName="Badgenumber" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="DEFAULTDEPTID" ColumnName="DEFAULTDEPTID" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="DEPTID" ColumnName="DEPTID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="absence" FunctionName="ZKAccessModel.Store.absence">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ZKAccessModel.absence_Result">
+          <ScalarProperty Name="Badgenumber" ColumnName="Badgenumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="DEPTID" ColumnName="DEPTID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="theabsence" FunctionName="ZKAccessModel.Store.absence" />
+    <FunctionImportMapping FunctionImportName="absence1" FunctionName="ZKAccessModel.Store.absence" />
+    <FunctionImportMapping FunctionImportName="the_absence" FunctionName="ZKAccessModel.Store.absence">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ZKAccessModel.absence_Result">
+          <ScalarProperty Name="Badgenumber" ColumnName="Badgenumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="DEPTID" ColumnName="DEPTID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="absen" FunctionName="ZKAccessModel.Store.absence" />
+    <FunctionImportMapping FunctionImportName="absencesp" FunctionName="ZKAccessModel.Store.absence" />
+  </EntityContainerMapping>
+</Mapping>

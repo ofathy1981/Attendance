@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AttLoginModelStoreContainer" CdmEntityContainer="AttLoginEntities">
+    <EntitySetMapping Name="DailyAttendanceReports">
+      <EntityTypeMapping TypeName="AttLoginModel.DailyAttendanceReport">
+        <MappingFragment StoreEntitySet="DailyAttendanceReport">
+          <ScalarProperty Name="thedate2" ColumnName="thedate2" />
+          <ScalarProperty Name="device_name1" ColumnName="device_name1" />
+          <ScalarProperty Name="thedate1" ColumnName="thedate1" />
+          <ScalarProperty Name="device_name2" ColumnName="device_name2" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="thetime1" ColumnName="thetime1" />
+          <ScalarProperty Name="thetime2" ColumnName="thetime2" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,78 @@
+﻿@model Attendance.Models.byinterval
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>byinterval</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pin2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pin2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pin)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.thetime1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.thetime1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.thetime2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.thetime2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.device_name1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.device_name1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.device_name2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.device_name2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTNAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.thedate1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.thedate1)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

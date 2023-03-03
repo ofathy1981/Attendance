@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AttLoginModel2StoreContainer" CdmEntityContainer="cumulativeent">
+    <EntitySetMapping Name="cumlatives">
+      <EntityTypeMapping TypeName="AttLoginModel2.cumlative">
+        <MappingFragment StoreEntitySet="cumlative">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="delayinmin" ColumnName="delayinmin" />
+          <ScalarProperty Name="themonth" ColumnName="themonth" />
+          <ScalarProperty Name="theyear" ColumnName="theyear" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

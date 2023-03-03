@@ -1,0 +1,54 @@
+﻿@model Attendance.Models.attendancev
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>attendancev</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmpID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmpID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EMPName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EMPName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SectorName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SectorName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.device_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.device_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.atttime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.atttime)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

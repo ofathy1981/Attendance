@@ -1,0 +1,185 @@
+﻿@model IEnumerable<Attendance.Models.DELAY>
+
+@{
+    ViewBag.Title = "الغياب";
+}
+
+<h2>التاخير</h2>
+@{
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+        {
+            Text = "الأصول والأستثمار",
+            Value = "الأصول والأستثمار"
+        });
+    listItems.Add(new SelectListItem
+        {
+            Text = "الشئون المالية",
+            Value = "الشئون المالية",
+        });
+    listItems.Add(new SelectListItem
+        {
+            Text = "الشئون الهندسية",
+            Value = "الشئون الهندسية"
+        });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الامن",
+        Value = "الامن"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الخدمات",
+        Value = "الخدمات"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الرقابة الداخلية",
+        Value = "الرقابة الداخلية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الشئون التجارية",
+        Value = "الشئون التجارية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الشئون الطبية",
+        Value = "الشئون الطبية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "المعلومات",
+        Value = "المعلومات"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "AlexHI",
+        Value = "AlexHI"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "EGOTH",
+        Value = "EGOTH"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "ادارة الشركة والمتابعة",
+        Value = "ادارة الشركة والمتابعة"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "التدريب والمعاهد",
+        Value = "التدريب والمعاهد"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الجراج",
+        Value = "الجراج"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الرقابة على الفنادق",
+        Value = "الرقابة على الفنادق"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الشئون الادارية",
+        Value = "الشئون الادارية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "العلاقات العامة",
+        Value = "العلاقات العام"
+    });
+
+    listItems.Add(new SelectListItem
+    {
+        Text = "القانونى & العقود والشهر",
+        Value = "القانونى & العقود والشهر"
+    });
+
+    listItems.Add(new SelectListItem
+    {
+        Text = "القانونى&القضاياوالتنفيذ",
+        Value = "القانونى&القضاياوالتنفيذ"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "معاونى الخدمة",
+        Value = "معاونى الخدمة"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "معهد الأسكندرية",
+        Value = "معهد الأسكندرية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "معهد الاقصر",
+        Value = "معهد الاقصر"
+    });
+
+}
+
+@using (Html.BeginForm("delay", "delay"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    <div>
+        اختار التاريخ
+        <br />         @Html.TextBox("the_input_date", "", new { @autocomplete = "off" })
+
+        <div>
+            القطاعات التى تم اختيارها   @Html.DropDownList("depname", new SelectList(listItems, "Value", "Text"))
+        </div>
+        <div>
+            اختار القطاعات  @Html.TextBox("dept", "", new { @autocomplete = "off", @val = "الشئون الماليه" })
+        </div>
+
+        <br />  <input type="submit" value="search" />
+    </div>
+
+
+
+
+
+
+
+}
+
+<div>
+    <a href="/home/index">Back To Home</a>
+</div>
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#the_input_date").datepicker({
+
+            dateFormat: "yy-mm-dd"
+        });
+    });
+</script>
+<script>
+    $('#depname').change(function () {
+        var depname = $('#depname').val();
+        $("#dept").val(depname);
+    });
+
+</script>
+<script>
+    $("#dept").val("الأصول والأستثمار");
+
+
+</script>

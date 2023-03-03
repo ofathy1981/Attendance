@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AttLoginModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DailyAttendanceReport">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="pin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="thetime1" Type="Time" Precision="7" />
+    <Property Name="thetime2" Type="Time" Precision="7" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="DEPTNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="device_name2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="thedate1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="device_name1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="thedate2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="AttLoginEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DailyAttendanceReports" EntityType="Self.DailyAttendanceReport" />
+  </EntityContainer>
+</Schema>

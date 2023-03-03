@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="delaymodelStoreContainer" CdmEntityContainer="ZKAccessEntitiesfordelay">
+    <FunctionImportMapping FunctionImportName="delay_count" FunctionName="delaymodel.Store.delay_count">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="delaymodel.delay_count_Result">
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="thedate" ColumnName="thedate" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="thetime" ColumnName="thetime" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

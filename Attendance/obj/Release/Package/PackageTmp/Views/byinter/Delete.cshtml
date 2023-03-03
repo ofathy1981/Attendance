@@ -1,0 +1,82 @@
+﻿@model Attendance.Models.byinterval
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>byinterval</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pin2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pin2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pin)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.thetime1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.thetime1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.thetime2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.thetime2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.device_name1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.device_name1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.device_name2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.device_name2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTNAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.thedate1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.thedate1)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

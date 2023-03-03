@@ -1,0 +1,920 @@
+﻿@model IEnumerable<Attendance.Models.DailyAttendanceReport>
+@{
+    ViewBag.Title = "نتيجة البحث ";
+}
+<style>
+    #preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        background: #fff;
+    }
+
+    #ldr {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+</style>
+
+
+
+<div id="preloader">
+    <img src="~/Images/wait.gif" height="80" width="100" id="ldr" />
+</div>
+@{
+    string p9 = (string)System.Web.HttpContext.Current.Session["entereddate"];
+    string p10 = (string)System.Web.HttpContext.Current.Session["ssector"];
+}
+@{
+    TimeSpan timelim = TimeSpan.Parse("08:30:00");
+    TimeSpan timelim2 = TimeSpan.Parse("08:45:00");
+	TimeSpan timelim3 = TimeSpan.Parse("09:15:00");
+	TimeSpan timelim4 = TimeSpan.Parse("01:45:00");
+  
+}
+<br />
+@{
+
+    List<string> listItems = new List<string>();
+    listItems.Add("10400");
+    listItems.Add("10435");
+    listItems.Add("10446");
+    listItems.Add("10570");
+    listItems.Add("10604");
+    listItems.Add("10701");
+    listItems.Add("10822");
+    listItems.Add("10832");
+    listItems.Add("10847");
+    listItems.Add("10883");
+    listItems.Add("10950");
+    listItems.Add("10974");
+    listItems.Add("10999");
+    listItems.Add("11001");
+    listItems.Add("11004");
+    listItems.Add("11018");
+    listItems.Add("11103");
+    listItems.Add("11126");
+    listItems.Add("11132");
+    listItems.Add("11136");
+    listItems.Add("11139");
+    listItems.Add("11140");
+    listItems.Add("11141");
+    listItems.Add("11142");
+    listItems.Add("11144");
+    listItems.Add("11145");
+    listItems.Add("11146");
+    listItems.Add("11161");
+    listItems.Add("11164");
+    listItems.Add("11165");
+    listItems.Add("11189");
+    listItems.Add("11229");
+    listItems.Add("11231");
+    listItems.Add("11235");
+    listItems.Add("11237");
+    listItems.Add("11238");
+    listItems.Add("11279");
+    listItems.Add("11287");
+    listItems.Add("11293");
+    listItems.Add("11398");
+    listItems.Add("11399");
+    listItems.Add("11420");
+    listItems.Add("11444");
+    listItems.Add("11493");
+    listItems.Add("11844");
+    listItems.Add("11848");
+    listItems.Add("11875");
+    listItems.Add("11881");
+    listItems.Add("11927");
+    listItems.Add("11932");
+    listItems.Add("12066");
+    listItems.Add("12093");
+    listItems.Add("12225");
+    listItems.Add("12309");
+    listItems.Add("12378");
+    listItems.Add("12821");
+    listItems.Add("10353");
+    listItems.Add("10402");
+    listItems.Add("10405");
+    listItems.Add("10417");
+    listItems.Add("10422");
+    listItems.Add("10447");
+    listItems.Add("10449");
+    listItems.Add("10450");
+    listItems.Add("10462");
+    listItems.Add("10466");
+    listItems.Add("10468");
+    listItems.Add("10555");
+    listItems.Add("10563");
+    listItems.Add("10566");
+    listItems.Add("10615");
+    listItems.Add("10616");
+    listItems.Add("10642");
+    listItems.Add("10644");
+    listItems.Add("10652");
+    listItems.Add("10686");
+    listItems.Add("10689");
+    listItems.Add("10697");
+    listItems.Add("10706");
+    listItems.Add("10710");
+    listItems.Add("10711");
+    listItems.Add("10714");
+    listItems.Add("10817");
+    listItems.Add("10818");
+    listItems.Add("10826");
+    listItems.Add("10828");
+    listItems.Add("10830");
+    listItems.Add("10831");
+    listItems.Add("10835");
+    listItems.Add("10836");
+    listItems.Add("10868");
+    listItems.Add("10869");
+    listItems.Add("10870");
+    listItems.Add("10884");
+    listItems.Add("10944");
+    listItems.Add("10949");
+    listItems.Add("10951");
+    listItems.Add("10952");
+    listItems.Add("10954");
+    listItems.Add("10955");
+    listItems.Add("10973");
+    listItems.Add("10994");
+    listItems.Add("10995");
+    listItems.Add("10996");
+    listItems.Add("11000");
+    listItems.Add("11003");
+    listItems.Add("11005");
+    listItems.Add("11084");
+    listItems.Add("11085");
+    listItems.Add("11086");
+    listItems.Add("11088");
+    listItems.Add("11106");
+    listItems.Add("11127");
+    listItems.Add("11128");
+    listItems.Add("11130");
+    listItems.Add("11135");
+    listItems.Add("11143");
+    listItems.Add("11148");
+    listItems.Add("11162");
+    listItems.Add("11167");
+    listItems.Add("11174");
+    listItems.Add("11176");
+    listItems.Add("11177");
+    listItems.Add("11179");
+    listItems.Add("11185");
+    listItems.Add("11186");
+    listItems.Add("11192");
+    listItems.Add("11195");
+    listItems.Add("11197");
+    listItems.Add("11198");
+    listItems.Add("11224");
+    listItems.Add("11225");
+    listItems.Add("11233");
+    listItems.Add("11248");
+    listItems.Add("11249");
+    listItems.Add("11250");
+    listItems.Add("11280");
+    listItems.Add("11283");
+    listItems.Add("11288");
+    listItems.Add("11289");
+    listItems.Add("11290");
+    listItems.Add("11297");
+    listItems.Add("11315");
+    listItems.Add("11397");
+    listItems.Add("11404");
+    listItems.Add("11406");
+    listItems.Add("11407");
+    listItems.Add("11413");
+    listItems.Add("11416");
+    listItems.Add("11439");
+    listItems.Add("11458");
+    listItems.Add("11489");
+    listItems.Add("11491");
+    listItems.Add("11496");
+    listItems.Add("11538");
+    listItems.Add("11539");
+    listItems.Add("11557");
+    listItems.Add("11840");
+    listItems.Add("11863");
+    listItems.Add("11871");
+    listItems.Add("11882");
+    listItems.Add("11897");
+    listItems.Add("11923");
+    listItems.Add("12013");
+    listItems.Add("12039");
+    listItems.Add("12120");
+    listItems.Add("12161");
+    listItems.Add("12290");
+    listItems.Add("12291");
+    listItems.Add("12295");
+    listItems.Add("12301");
+    listItems.Add("12308");
+    listItems.Add("12329");
+    listItems.Add("12444");
+    listItems.Add("12572");
+    listItems.Add("12650");
+    listItems.Add("12665");
+    listItems.Add("12792");
+    listItems.Add("12823");
+
+
+
+}
+
+@{
+
+    List<string> listItemssec = new List<string>();
+    listItemssec.Add("11816");
+	}
+
+@{
+
+    List<string> listItems2 = new List<string>();
+    listItems2.Add("11816");
+    listItems2.Add("12464");
+    listItems2.Add("11125");
+    listItems2.Add("11705");
+    listItems2.Add("702");
+    listItems2.Add("12098");
+    listItems2.Add("12237");
+    listItems2.Add("12233");
+    listItems2.Add("11497");
+    listItems2.Add("11590");
+    listItems2.Add("12140");
+    listItems2.Add("11681");
+    listItems2.Add("11655");
+    listItems2.Add("12080");
+    listItems2.Add("12624");
+    listItems2.Add("12405");
+    listItems2.Add("12465");
+    listItems2.Add("12692");
+    listItems2.Add("11795");
+    listItems2.Add("11414");
+    listItems2.Add("12748");
+    listItems2.Add("12443");
+    listItems2.Add("11950");
+    listItems2.Add("11944");
+    listItems2.Add("11197");
+    listItems2.Add("12035");
+    listItems2.Add("12036");
+    listItems2.Add("11648");
+    listItems2.Add("11742");
+    listItems2.Add("12387");
+    listItems2.Add("12729");
+    listItems2.Add("12279");
+    listItems2.Add("12507");
+    listItems2.Add("12056");
+    listItems2.Add("12159");
+    listItems2.Add("11686");
+    listItems2.Add("11415");
+    listItems2.Add("11317");
+    listItems2.Add("12040");
+    listItems2.Add("11313");
+    listItems2.Add("11398");
+    listItems2.Add("11399");
+    listItems2.Add("12250");
+    listItems2.Add("11675");
+    listItems2.Add("12725");
+    listItems2.Add("12069");
+    listItems2.Add("11834");
+    listItems2.Add("12192");
+    listItems2.Add("12228");
+    listItems2.Add("12361");
+    listItems2.Add("11919");
+    listItems2.Add("11242");
+    listItems2.Add("11703");
+}
+@{ int i = 0;}
+<center>
+    <h2> تقرير الحضور عن يوم  </h2>
+
+    <h2>@p9</h2>  <h2>قطاع @p10</h2>
+</center>
+<style >
+body {
+  -webkit-print-color-adjust: exact !important;
+}
+    th, td {
+        padding: 15px;
+        text-align: right;
+        font-family: 'Arial Rounded MT';
+        font-weight: 500;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: black;
+        font-style:normal;
+    }
+
+    table {
+        font-size: 20px;
+        border: 1px solid black;
+    }
+    .bog {
+        background-imageurl('@Url.Content("~/Images/X.png")');
+        width: 10%;
+        height: 10%;
+
+    }
+
+
+</style>
+<table class="table table-striped">
+    <tr style="font-weight:200;color:black">
+      
+        <th>
+            التاخير
+
+        </th>
+        <th>
+            ماكينة الانصراف
+        </th>
+        <th>
+            وقت الانصراف
+        </th>
+        <th>
+            ماكينة الحضور
+
+          </th>
+        <th>
+            وقت الحضور
+        </th>
+        <th>
+            الاسم
+        </th>
+     <th>م</th>
+    </tr>
+    @{
+
+        string  city1 = "الأصول والأستثمار";
+        
+        string  Fawalla1 ="الشئون التجارية" ;
+        string  Fawalla2 ="الشئون الهندسية" ;
+        string  Fawalla3 ="التدريب والمعاهد" ;
+        
+        string Mohandseen1="الرقابة على الفنادق";
+        string Mohandseen2="الشئون الادارية";
+        string Mohandseen3="العلاقات العامة";
+        
+        string kasr="الرقابة الداخلية";
+        
+        string Tawfikia1="القانونى&القضاياوالتنفيذ";
+        string Tawfikia2="القانونى & العقود والشهر";
+        
+        string Garden1="الشئون المالية";
+        string Garden2="ادارة الشركة والمتابعة";
+        
+   
+        
+        
+        
+        
+
+    }
+    @foreach (var item in Model.OrderBy(item => item.Name))
+    {
+    //   if ((item.thetime1 > timelim3 && item.thetime1<timelim4) && listItemssec.Contains(item.pin)){ <h1></h1>}
+		//     if (item.thetime2 == item.thetime1){ <h1></h1>}
+//	else 
+   //********************************condition 1*******************************************************************     
+        if (/*(item.device_name2 == "الفوالة_8" && item.device_name1 == "الفوالة_10")||
+            (item.device_name2 == "الفوالة_10" && item.device_name1 == "الفوالة_10") ||
+            (item.device_name2 == "الفوالة_8" && item.device_name1 == "الفوالة_8") ||
+            (item.device_name2 == "مهندسين_7" && item.device_name1 == "مهندسين_7") ||
+            (item.device_name2 == "مهندسين_8" && item.device_name1 == "مهندسين_8") ||
+            (item.device_name2 == "مهندسين_7" && item.device_name1 == "مهندسين_7") ||
+            (item.device_name2 == "جاردن _6" && item.device_name1 == "جاردن _6") ||
+            (item.device_name2 == "جاردن _9" && item.device_name1 == "جاردن _9") */
+//Garden exception********************************************************************************************************************************************************          
+     (item.DEPTNAME == "الشئون المالية" && item.device_name1 == "جاردن _6" && item.device_name2 == "جاردن _6") ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name1 == "جاردن _9" && item.device_name2 == "جاردن _9") ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name1 == "جاردن _6" && item.device_name2 == "جاردن _9") ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name2 == "جاردن _6" && item.device_name1 == "جاردن _9") || 
+    
+     (item.DEPTNAME == "ادارة الشركة والمتابعة" && item.device_name1 == "جاردن _6" && item.device_name2 == "جاردن _6") ||
+     (item.DEPTNAME == "ادارة الشركة والمتابعة" && item.device_name1 == "جاردن _9" && item.device_name2 == "جاردن _9") ||
+     (item.DEPTNAME == "ادارة الشركة والمتابعة" && item.device_name1 == "جاردن _6" && item.device_name2 == "جاردن _9") ||
+     (item.DEPTNAME == "ادارة الشركة والمتابعة" && item.device_name2 == "جاردن _9" && item.device_name1 == "جاردن _6") ||
+
+     (item.DEPTNAME == "المعلومات" && item.device_name1 == "جاردن _6" && item.device_name2 == "جاردن _6") ||
+     (item.DEPTNAME == "المعلومات" && item.device_name1 == "جاردن _9" && item.device_name2 == "جاردن _9") ||
+     (item.DEPTNAME == "المعلومات" && item.device_name1 == "جاردن _6" && item.device_name2 == "جاردن _9") ||
+     (item.DEPTNAME == "المعلومات" && item.device_name2 == "جاردن _9" && item.device_name1 == "جاردن _6") ||
+     (item.DEPTNAME == "المعلومات" && (item.pin == "12252" || item.pin == "11853") && ((item.device_name2 == "الفوالة_10" && item.device_name1 == "الفوالة_8") || (item.device_name2 == "الفوالة_8" && item.device_name1 == "الفوالة_10") || (item.device_name2 == "الفوالة_10" && item.device_name1 == "الفوالة_10") || (item.device_name2 == "الفوالة_8" && item.device_name1 == "الفوالة_8"))) ||
+     (item.DEPTNAME == "المعلومات" && (item.pin == "11914" || item.pin == "12021") && ((item.device_name2 == "مهندسين_8" && item.device_name1 == "مهندسين_7") || (item.device_name2 == "مهندسين_7" && item.device_name1 == "مهندسين_8") || (item.device_name2 == "مهندسين_7" && item.device_name1 == "مهندسين_7") || (item.device_name2 == "مهندسين_8" && item.device_name1 == "مهندسين_8"))) ||
+     (item.DEPTNAME == "المعلومات" && (item.pin == "12181") && (item.device_name2 == "التوفيقية" && item.device_name1 == "التوفيقية")) ||
+
+             
+     
+     
+     
+     
+     
+     
+//Fawalla  exception********************************************************************************************************************************************************          
+     (item.DEPTNAME == "الشئون التجارية" && item.device_name1 == "الفوالة_10" && item.device_name2 == "الفوالة_10") ||
+     (item.DEPTNAME == "الشئون التجارية" && item.device_name1 == "الفوالة_8" && item.device_name2 == "الفوالة_8") ||
+     (item.DEPTNAME == "الشئون التجارية" && item.device_name1 == "الفوالة_10" && item.device_name2 == "الفوالة_8") ||
+     (item.DEPTNAME == "الشئون التجارية" && item.device_name1 == "الفوالة_8" && item.device_name2 == "الفوالة_10") ||
+
+     (item.DEPTNAME == "التدريب والمعاهد" && item.device_name1 == "الفوالة_10" && item.device_name2 == "الفوالة_10") ||
+     (item.DEPTNAME == "التدريب والمعاهد" && item.device_name1 == "الفوالة_8" && item.device_name2 == "الفوالة_8") ||
+     (item.DEPTNAME == "التدريب والمعاهد" && item.device_name1 == "الفوالة_10" && item.device_name2 == "الفوالة_8") ||
+     (item.DEPTNAME == "التدريب والمعاهد" && item.device_name1 == "الفوالة_8" && item.device_name2 == "الفوالة_10") ||
+
+     (item.DEPTNAME == "الشئون الهندسية" && item.device_name1 == "الفوالة_10" && item.device_name2 == "الفوالة_10") ||
+     (item.DEPTNAME == "الشئون الهندسية" && item.device_name1 == "الفوالة_8" && item.device_name2 == "الفوالة_8") ||
+     (item.DEPTNAME == "الشئون الهندسية" && item.device_name1 == "الفوالة_10" && item.device_name2 == "الفوالة_8") ||
+     (item.DEPTNAME == "الشئون الهندسية" && item.device_name1 == "الفوالة_8" && item.device_name2 == "الفوالة_10") ||
+     (item.DEPTNAME == "الشئون الهندسية" && (item.pin == "11444" || item.pin == "12744" || item.pin == "12120" || item.pin == "11583" || item.pin == "12821" || item.pin == "12012") && item.device_name1 == "جاردن _6" && item.device_name2 == "جاردن _6") ||
+
+
+//Mohandseen  exception********************************************************************************************************************************************************          
+     (item.DEPTNAME == "العلاقات العامة" && item.device_name1 == "مهندسين_8" && item.device_name2 == "مهندسين_8") ||
+     (item.DEPTNAME == "العلاقات العامة" && item.device_name1 == "مهندسين_7" && item.device_name2 == "مهندسين_7") ||
+     (item.DEPTNAME == "العلاقات العامة" && item.device_name1 == "مهندسين_8" && item.device_name2 == "مهندسين_7") ||
+     (item.DEPTNAME == "العلاقات العامة" && item.device_name1 == "مهندسين_7" && item.device_name2 == "مهندسين_8") ||
+
+     (item.DEPTNAME == "الشئون الادارية" && item.device_name1 == "مهندسين_8" && item.device_name2 == "مهندسين_8") ||
+     (item.DEPTNAME == "الشئون الادارية" && item.device_name1 == "مهندسين_7" && item.device_name2 == "مهندسين_7") ||
+     (item.DEPTNAME == "الشئون الادارية" && item.device_name1 == "مهندسين_8" && item.device_name2 == "مهندسين_7") ||
+     (item.DEPTNAME == "الشئون الادارية" && item.device_name1 == "مهندسين_7" && item.device_name2 == "مهندسين_8") ||
+
+     (item.DEPTNAME == "الرقابة على الفنادق" && item.device_name1 == "مهندسين_8" && item.device_name2 == "مهندسين_8") ||
+     (item.DEPTNAME == "الرقابة على الفنادق" && item.device_name1 == "مهندسين_7" && item.device_name2 == "مهندسين_7") ||
+     (item.DEPTNAME == "الرقابة على الفنادق" && item.device_name1 == "مهندسين_8" && item.device_name2 == "مهندسين_7") ||
+     (item.DEPTNAME == "الرقابة على الفنادق" && item.device_name1 == "مهندسين_7" && item.device_name2 == "مهندسين_8") ||
+
+     (item.DEPTNAME == "الشئون الطبية" && item.device_name1 == "مهندسين_8" && item.device_name2 == "مهندسين_8") ||
+     (item.DEPTNAME == "الشئون الطبية" && item.device_name1 == "مهندسين_7" && item.device_name2 == "مهندسين_7") ||
+     (item.DEPTNAME == "الشئون الطبية" && item.device_name1 == "مهندسين_8" && item.device_name2 == "مهندسين_7") ||
+     (item.DEPTNAME == "الشئون الطبية" && item.device_name1 == "مهندسين_7" && item.device_name2 == "مهندسين_8") ||
+     (item.DEPTNAME == "الشئون الطبية" && (item.pin == "10835" || item.pin == "12307" || item.pin == "11701") && ((item.device_name1 == "الفوالة_10" && item.device_name2 == "الفوالة_8") || (item.device_name1 == "الفوالة_8" && item.device_name2 == "الفوالة_10") || (item.device_name1 == "الفوالة_8" && item.device_name2 == "الفوالة_8") || (item.device_name1 == "الفوالة_10" && item.device_name2 == "الفوالة_10"))) ||
+     (item.DEPTNAME == "الشئون الطبية" && (item.pin == "12230" || item.pin == "12817") && ((item.device_name1 == "جاردن _6" && item.device_name2 == "جاردن _9") || (item.device_name1 == "جاردن _9" && item.device_name2 == "جاردن _6") || (item.device_name1 == "جاردن _6" && item.device_name2 == "جاردن _6") || (item.device_name1 == "جاردن _9" && item.device_name2 == "جاردن _9"))) ||             
+
+//citybank exception*************************************************************************************************************************************************************     
+     (item.DEPTNAME == "الأصول والأستثمار" && item.device_name1 == "سيتي بنك" && item.device_name2 == "سيتي بنك") ||
+//kasr exception*************************************************************************************************************************************************************     
+     (item.DEPTNAME == "الرقابة الداخلية" && item.device_name1 == "قصر النيل" && item.device_name2 == "قصر النيل") ||
+//tawfikia exception*************************************************************************************************************************************************************     
+     (item.DEPTNAME == "القانونى&القضاياوالتنفيذ" && item.device_name1 == "التوفيقية" && item.device_name2 == "التوفيقية") ||
+     (item.DEPTNAME == "القانونى & العقود والشهر" && item.device_name1 == "التوفيقية" && item.device_name2 == "التوفيقية")     
+     
+     /*||
+                                                                                                                * 
+                                                                                                                * 
+     
+     (item.DEPTNAME == "الشئون المالية" && item.device_name1 == null && item.device_name2 == "جاردن _6") ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name1 == null && item.device_name2 == "جاردن _9") ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name2 == null && item.device_name1 == "جاردن _6") ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name2 == null && item.device_name1 == "جاردن _9") */
+    //  (item.device_name1 == "الفوالة_8" && item.device_name2 == "الفوالة_10") || (item.device_name1 == "مهندسين_7" && item.device_name2 == "مهندسين_8") || (item.device_name1 == "مهندسين_8" && item.device_name2 == "مهندسين_7") || (item.device_name1 == "جاردن _6" && item.device_name2 == "جاردن _9") || (item.device_name1 == "جاردن _9" && item.device_name2 == "جاردن _6") //|| (item.device_name1 != null && item.device_name2 == null) //|| (item.device_name1 == null && item.device_name2 != null)
+                    
+         
+         )
+       {
+           
+           <tr>
+            @if (item.thetime1 > timelim && !listItems.Contains(item.pin))
+{
+    <td  style="background:linear-gradient()">@{ var diff2 = item.thetime1 - timelim; } @diff2</td>
+}
+else if (item.thetime1 > timelim2 && listItems.Contains(item.pin))
+{
+            <td style="background:linear-gradient()">@{ var diff3 = item.thetime1 - timelim2; } @diff3</td>
+
+                
+            } else 
+            { <td></td> }
+         
+@if (item.device_name2==null)
+{
+        <td ><img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png" ></td>
+
+}
+
+else { 
+            <td style="">
+                @Html.DisplayFor(modelItem => item.device_name2)
+
+
+            </td>}
+   
+        
+          @if (!item.thetime2.HasValue )
+{
+    <td ><img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png" ></td>
+}
+
+else
+{
+            <td>
+                @Html.DisplayFor(modelItem => item.thetime2)
+            </td>
+          }
+@if (item.device_name1 == null)
+{
+    <td >
+        <img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png">
+    </td>}
+         else{ 
+            <td>
+                @Html.DisplayFor(modelItem => item.device_name1)
+            </td>
+            }
+        
+@if (!item.thetime1.HasValue || item.thetime1 == item.thetime2)
+{
+    <td >
+        <img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png">
+    </td>
+}
+
+else
+{
+    <td>
+                @Html.DisplayFor(modelItem => item.thetime1)
+            </td> 
+    
+}
+  
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>  @{i++;}@i </td>
+        </tr>
+           
+           
+       }
+
+     //********************************condition 2*************************************************************************      
+//-------------------------------------garden//////////////////////////////////////////////////////////////////////////////////////////////////
+
+     else  if ((item.device_name2 != item.device_name1) ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name1 != "جاردن _6" && item.device_name2 != "جاردن _6") ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name1 != "جاردن _9" && item.device_name2 != "جاردن _9") ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name1 != "جاردن _6" ) ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name2 != "جاردن _9" ) ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name1 == null ) ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name2 == null ) ||
+     
+     (item.DEPTNAME == "ادارة الشركة والمتابعة" && item.device_name1 != "جاردن _6" && item.device_name2 != "جاردن _6") ||
+     (item.DEPTNAME == "ادارة الشركة والمتابعة" && item.device_name1 != "جاردن _9" && item.device_name2 != "جاردن _9") ||
+     (item.DEPTNAME == "ادارة الشركة والمتابعة" && item.device_name1 != "جاردن _6" ) ||
+     (item.DEPTNAME == "ادارة الشركة والمتابعة" && item.device_name2 != "جاردن _9" ) ||
+     (item.DEPTNAME == "ادارة الشركة والمتابعة" && item.device_name1 == null ) ||
+     (item.DEPTNAME == "ادارة الشركة والمتابعة" && item.device_name2 == null) ||
+
+     (item.DEPTNAME == "المعلومات" && item.device_name1 != "جاردن _6" && item.device_name2 != "جاردن _6") ||
+     (item.DEPTNAME == "المعلومات" && item.device_name1 != "جاردن _9" && item.device_name2 != "جاردن _9") ||
+     (item.DEPTNAME == "المعلومات" && item.device_name1 != "جاردن _6") ||
+     (item.DEPTNAME == "المعلومات" && item.device_name2 != "جاردن _9") ||
+     (item.DEPTNAME == "المعلومات" && item.device_name1 == null) ||
+     (item.DEPTNAME == "المعلومات" && item.device_name2 == null) ||  
+     
+     
+     
+//----------------------------------fawalla////////////////////////////////////////////////////////////////////////////////////////////////////////
+     (item.DEPTNAME == "الشئون التجارية" && item.device_name1 != "الفوالة_8" && item.device_name2 != "الفوالة_8") ||
+     (item.DEPTNAME == "الشئون التجارية" && item.device_name1 != "الفوالة_10" && item.device_name2 != "الفوالة_10") ||
+     (item.DEPTNAME == "الشئون التجارية" && item.device_name1 != "الفوالة_8") ||
+     (item.DEPTNAME == "الشئون التجارية" && item.device_name2 != "الفوالة_10") ||
+     (item.DEPTNAME == "الشئون التجارية" && item.device_name1 == null) ||
+     (item.DEPTNAME == "الشئون التجارية" && item.device_name2 == null) ||
+
+     (item.DEPTNAME == "التدريب والمعاهد" && item.device_name1 != "الفوالة_8" && item.device_name2 != "الفوالة_8") ||
+     (item.DEPTNAME == "التدريب والمعاهد" && item.device_name1 != "الفوالة_10" && item.device_name2 != "الفوالة_10") ||
+     (item.DEPTNAME == "التدريب والمعاهد" && item.device_name1 != "الفوالة_8") ||
+     (item.DEPTNAME == "التدريب والمعاهد" && item.device_name2 != "الفوالة_10") ||
+     (item.DEPTNAME == "التدريب والمعاهد" && item.device_name1 == null) ||
+     (item.DEPTNAME == "التدريب والمعاهد" && item.device_name2 == null) ||
+
+     (item.DEPTNAME == "الشئون الهندسية" && item.device_name1 != "الفوالة_8" && item.device_name2 != "الفوالة_8") ||
+     (item.DEPTNAME == "الشئون الهندسية" && item.device_name1 != "الفوالة_10" && item.device_name2 != "الفوالة_10") ||
+     (item.DEPTNAME == "الشئون الهندسية" && item.device_name1 != "الفوالة_8") ||
+     (item.DEPTNAME == "الشئون الهندسية" && item.device_name2 != "الفوالة_10") ||
+     (item.DEPTNAME == "الشئون الهندسية" && item.device_name1 == null) ||
+     (item.DEPTNAME == "الشئون الهندسية" && item.device_name2 == null) ||
+     (item.DEPTNAME == "الشئون الهندسية" && item.pin != "11444")||
+     
+//----------------------------------mohandseen///////////////////////////////////////////////////////////////////////////////////////////////////////
+     (item.DEPTNAME == "العلاقات العامة" && item.device_name1 != "مهندسين_7" && item.device_name2 != "مهندسين_7") ||
+     (item.DEPTNAME == "العلاقات العامة" && item.device_name1 != "مهندسين_8" && item.device_name2 != "مهندسين_8") ||
+     (item.DEPTNAME == "العلاقات العامة" && item.device_name1 != "مهندسين_7") ||
+     (item.DEPTNAME == "العلاقات العامة" && item.device_name2 != "مهندسين_8") ||
+     (item.DEPTNAME == "العلاقات العامة" && item.device_name1 == null) ||
+     (item.DEPTNAME == "العلاقات العامة" && item.device_name2 == null) ||
+
+     (item.DEPTNAME == "الشئون الادارية" && item.device_name1 != "مهندسين_7" && item.device_name2 != "مهندسين_7") ||
+     (item.DEPTNAME == "الشئون الادارية" && item.device_name1 != "مهندسين_8" && item.device_name2 != "مهندسين_8") ||
+     (item.DEPTNAME == "الشئون الادارية" && item.device_name1 != "مهندسين_7") ||
+     (item.DEPTNAME == "الشئون الادارية" && item.device_name2 != "مهندسين_8") ||
+     (item.DEPTNAME == "الشئون الادارية" && item.device_name1 == null) ||
+     (item.DEPTNAME == "الشئون الادارية" && item.device_name2 == null) ||
+
+     (item.DEPTNAME == "الرقابة على الفنادق" && item.device_name1 != "مهندسين_7" && item.device_name2 != "مهندسين_7") ||
+     (item.DEPTNAME == "الرقابة على الفنادق" && item.device_name1 != "مهندسين_8" && item.device_name2 != "مهندسين_8") ||
+     (item.DEPTNAME == "الرقابة على الفنادق" && item.device_name1 != "مهندسين_7") ||
+     (item.DEPTNAME == "الرقابة على الفنادق" && item.device_name2 != "مهندسين_8") ||
+     (item.DEPTNAME == "الرقابة على الفنادق" && item.device_name1 == null) ||
+     (item.DEPTNAME == "الرقابة على الفنادق" && item.device_name2 == null) ||
+
+
+     (item.DEPTNAME == "الشئون الطبية" && item.device_name1 != "مهندسين_7" && item.device_name2 != "مهندسين_7") ||
+     (item.DEPTNAME == "الشئون الطبية" && item.device_name1 != "مهندسين_8" && item.device_name2 != "مهندسين_8") ||
+     (item.DEPTNAME == "الشئون الطبية" && item.device_name1 != "مهندسين_7") ||
+     (item.DEPTNAME == "الشئون الطبية" && item.device_name2 != "مهندسين_8") ||
+     (item.DEPTNAME == "الشئون الطبية" && item.device_name1 == null) ||
+     (item.DEPTNAME == "الشئون الطبية" && item.device_name2 == null) ||
+     
+     
+//----------------------------------city---bank///////////////////////////////////////////////////////////////////////////////////////////////////////////
+     (item.DEPTNAME == "الأصول والأستثمار" && item.device_name1 != "سيتي بنك" && item.device_name2 != "سيتي بنك") ||
+     (item.DEPTNAME == "الأصول والأستثمار" && item.device_name1 != "سيتي بنك") ||
+     (item.DEPTNAME == "الأصول والأستثمار" && item.device_name2 != "سيتي بنك") ||
+     (item.DEPTNAME == "الأصول والأستثمار" && item.device_name1 == null) ||
+     (item.DEPTNAME == "الأصول والأستثمار" && item.device_name2 == null) ||
+//----------------------------------Kasr//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     (item.DEPTNAME == "الرقابة الداخلية" && item.device_name1 != "قصر النيل" && item.device_name2 != "قصر النيل") ||
+     (item.DEPTNAME == "الرقابة الداخلية" && item.device_name1 != "قصر النيل") ||
+     (item.DEPTNAME == "الرقابة الداخلية" && item.device_name2 != "قصر النيل") ||
+     (item.DEPTNAME == "الرقابة الداخلية" && item.device_name1 == null) ||
+     (item.DEPTNAME == "الرقابة الداخلية" && item.device_name2 == null) ||
+//-----------------------------------tawfikia//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     (item.DEPTNAME == "القانونى&القضاياوالتنفيذ" && item.device_name1 != "التوفيقية" && item.device_name2 != "التوفيقية") ||
+     (item.DEPTNAME == "القانونى&القضاياوالتنفيذ" && item.device_name1 != "التوفيقية") ||
+     (item.DEPTNAME == "القانونى&القضاياوالتنفيذ" && item.device_name2 != "التوفيقية") ||
+     (item.DEPTNAME == "القانونى&القضاياوالتنفيذ" && item.device_name1 == null) ||
+     (item.DEPTNAME == "القانونى&القضاياوالتنفيذ" && item.device_name2 == null) ||
+
+     (item.DEPTNAME == "القانونى & العقود والشهر" && item.device_name1 != "التوفيقية" && item.device_name2 != "التوفيقية") ||
+     (item.DEPTNAME == "القانونى & العقود والشهر" && item.device_name1 != "التوفيقية") ||
+     (item.DEPTNAME == "القانونى & العقود والشهر" && item.device_name2 != "التوفيقية") ||
+     (item.DEPTNAME == "القانونى & العقود والشهر" && item.device_name1 == null) ||
+     (item.DEPTNAME == "القانونى & العقود والشهر" && item.device_name2 == null)   
+     
+            
+     
+     /*||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name2 == null && item.device_name1 != "جاردن _6") ||
+     (item.DEPTNAME == "الشئون المالية" && item.device_name2 == null && item.device_name1 != "جاردن _9") */
+                 
+                 
+                 
+
+
+
+
+     
+
+//citybank
+   //     (p10 == city1 && item.device_name1 != "سيتي بنك") ||
+     //   (p10 == city1 && item.device_name2 != "سيتي بنك") ||
+
+
+//gardencity
+ 
+        /*
+        (p10 == Garden2 && item.device_name1 != "جاردن _6") ||
+        (p10 == Garden2 && item.device_name2 != "جاردن _9") ||
+        (p10 == Garden2 && item.device_name1 != "جاردن _9") ||
+        (p10 == Garden2 && item.device_name2 != "جاردن _6") ||
+       
+//fawalla 
+        (p10 == Fawalla1 && item.device_name1 != "الفوالة_10") ||
+        (p10 == Fawalla1 && item.device_name2 != "الفوالة_8")  ||
+        (p10 == Fawalla1  && item.device_name1 != "الفوالة_8") ||
+        (p10 == Fawalla1 && item.device_name2 != "الفوالة_10") || 
+        
+        (p10 == Fawalla2 && item.device_name1 != "الفوالة_10") ||
+        (p10 == Fawalla2 && item.device_name2 != "الفوالة_8")  ||
+        (p10 == Fawalla2  && item.device_name1 != "الفوالة_8") ||
+  //      (p10 == Fawalla2  && item.device_name2 != "جاردن _10") ||  
+        
+        (p10 == Fawalla3 && item.device_name1 != "الفوالة_10") ||
+        (p10 == Fawalla3 && item.device_name2 != "الفوالة_8")  ||
+        (p10 == Fawalla3  && item.device_name1 != "الفوالة_8") ||
+        (p10 == Fawalla3 && item.device_name2 != "الفوالة_8") ||  
+       
+//mohandseen
+
+        (p10 == Mohandseen1 && item.device_name1 != "مهندسين_7") ||
+        (p10 == Mohandseen1 && item.device_name2 != "مهندسين_8")  ||
+        (p10 == Mohandseen1  && item.device_name1 != "مهندسين_8") ||
+        (p10 == Mohandseen1  && item.device_name2 != "مهندسين_7") || 
+        
+        (p10 == Mohandseen2 && item.device_name1 != "مهندسين_7") ||
+        (p10 == Mohandseen2 && item.device_name2 != "مهندسين_8")  ||
+        (p10 == Mohandseen2  && item.device_name1 != "مهندسين_8") ||
+        (p10 == Mohandseen2  && item.device_name2 != "مهندسين_7") || 
+        
+        (p10 == Mohandseen3 && item.device_name1 != "مهندسين_7") ||
+        (p10 == Mohandseen3 && item.device_name2 != "مهندسين_8")  ||
+        (p10 == Mohandseen3  && item.device_name1 != "مهندسين_8") ||
+        (p10 == Mohandseen3  && item.device_name2 != "مهندسين_7") ||
+
+//kasr
+
+        (p10 == kasr && item.device_name1 != "قصر النيل") ||
+        (p10 == kasr && item.device_name2 != "قصر النيل") ||
+
+        
+     
+//tawfekia
+        (p10 == Tawfikia1 && item.device_name1 != "التوفيقية") ||
+        (p10 == Tawfikia1 && item.device_name2 != "التوفيقية") ||
+        (p10 == Tawfikia2 && item.device_name1 != "التوفيقية") ||
+        (p10 == Tawfikia2 && item.device_name2 != "التوفيقية") 
+
+
+ */
+) 
+            {
+        <tr style="background-color:red !important;">
+            @if (item.thetime1 > timelim && !listItems.Contains(item.pin))
+{
+    <td  style="background:linear-gradient()">@{ var diff2 = item.thetime1 - timelim; } @diff2</td>
+}
+else if (item.thetime1 > timelim2 && listItems.Contains(item.pin))
+{
+            <td style="background:linear-gradient()">@{ var diff3 = item.thetime1 - timelim2; } @diff3</td>
+
+                
+            } else 
+            { <td></td> }
+         
+@if (item.device_name2 == null)
+{
+    <td style="background-color: red"><img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png"></td>
+
+}
+
+else
+{
+            <td style="">
+                @Html.DisplayFor(modelItem => item.device_name2)
+
+
+            </td>}
+   
+        
+          @if (!item.thetime2.HasValue)
+{
+    <td ><img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png" ></td>
+}
+else
+{
+            <td>
+                @Html.DisplayFor(modelItem => item.thetime2)
+            </td>
+          }
+@if (item.device_name1 == null)
+{
+    <td style="background-color: red">
+        <img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png">
+    </td>}
+else
+{
+            <td>
+                @Html.DisplayFor(modelItem => item.device_name1)
+            </td>
+            }
+        
+@if (!item.thetime1.HasValue)
+{
+    <td style="background-color: red">
+        <img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png">
+    </td>
+}
+else
+{
+    <td>
+                @Html.DisplayFor(modelItem => item.thetime1)
+            </td> 
+    
+}
+  
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>  @{i++;}@i </td>
+        </tr>
+        
+     
+
+
+            }
+
+ //***********************************condition last**********************************************************************************
+     //********************************************************************************************************************
+
+     else
+     {
+
+    <tr>
+            @if (item.thetime1 > timelim && !listItems.Contains(item.pin))
+{
+    <td  style="background:linear-gradient()">@{ var diff2 = item.thetime1 - timelim; } @diff2</td>
+}
+else if (item.thetime1 > timelim2 && listItems.Contains(item.pin))
+{
+            <td style="background:linear-gradient()">@{ var diff3 = item.thetime1 - timelim2; } @diff3</td>
+
+                
+            } else 
+            { <td></td> }
+         
+@if (item.device_name2==null)
+{
+        <td ><img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png" ></td>
+
+}
+
+else { 
+            <td style="">
+                @Html.DisplayFor(modelItem => item.device_name2)
+
+
+            </td>}
+   
+        
+          @if (!item.thetime2.HasValue)
+{
+    <td ><img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png" ></td>
+}
+else
+{
+            <td>
+                @Html.DisplayFor(modelItem => item.thetime2)
+            </td>
+          }
+@if (item.device_name1 == null)
+{
+    <td>
+        <img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png">
+    </td>}
+         else{ 
+            <td>
+                @Html.DisplayFor(modelItem => item.device_name1)
+            </td>
+            }
+        
+@if (!item.thetime1.HasValue)
+{
+    <td >
+        <img style="vertical-align:top; width: 90px; height: 30px;" src="~/Images/X.png">
+    </td>
+}
+else
+{
+    <td>
+                @Html.DisplayFor(modelItem => item.thetime1)
+            </td> 
+    
+}
+  
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>  @{i++;}@i </td>
+        </tr>
+    
+    
+    
+    
+}   
+       
+   
+    
+    }
+
+</table>
+<script>
+    jQuery(document).ready(function ($) {
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').fadeIn('slow', function () { });
+            }, -200000);
+
+
+
+        });
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').delay(1600).fadeOut('slow', function () { });
+            }, 20);
+
+
+
+        });
+    });
+</script>

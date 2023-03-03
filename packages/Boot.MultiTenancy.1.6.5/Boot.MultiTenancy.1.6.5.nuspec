@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Boot.MultiTenancy</id>
+    <version>1.6.5</version>
+    <title>Boot.Multitenancy</title>
+    <authors>Rickard Magnusson</authors>
+    <owners>Rickard Magnusson</owners>
+    <licenseUrl>https://bitbucket.org/rickardmagnusson/bootproject</licenseUrl>
+    <projectUrl>https://bitbucket.org/rickardmagnusson/boot.multitenancy/wiki/Home</projectUrl>
+    <iconUrl>https://bitbucket-assetroot.s3.amazonaws.com/c/photos/2014/Feb/22/bootproject-logo-112600298-1_avatar.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Boot.Multitenancy v.1.6.5
+Multitenancy is a NHibernate (ISession) helper for ISessionFactory. Support multiple domains and databases in a single instance. Contains a lot of extensions.
+Consult project website for more information.</description>
+    <summary>Boot.Multitenancy is a NHibernate (ISession) helper for ISessionFactory.</summary>
+    <releaseNotes>Changed domain value to allow get paramaters.</releaseNotes>
+    <copyright>Copyright Boot Project 2014</copyright>
+    <tags>MultiTenancy Multi Tenancy Domain hosting NhIbernate ISession FluentNHibernate BootProject Boot</tags>
+    <dependencies>
+      <dependency id="FluentNHibernate" version="1.4.0" />
+      <dependency id="NHibernate" version="3.3.3.4001" />
+      <dependency id="Iesi.Collections" version="3.2.0.4000" />
+    </dependencies>
+  </metadata>
+</package>

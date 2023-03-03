@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="delayZKAccessModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ZKAccess.dbo.DELAY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DELAY">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="DEPTNAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="device_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="pin" Type="nvarchar" MaxLength="50" />
+          <Property Name="thedate" Type="date" />
+          <Property Name="Name" Type="varchar" MaxLength="40" />
+          <Property Name="thetime" Type="time" Precision="7" />
+          <Property Name="delayinmin" Type="int" />
+        </EntityType>
+        <Function Name="delay_count" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="the_input_date" Type="nvarchar" Mode="In" />
+          <Parameter Name="dept" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="delayZKAccessModel1StoreContainer">
+          <EntitySet Name="DELAY" EntityType="Self.DELAY" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[DELAY].[id] AS [id], 
+[DELAY].[DEPTNAME] AS [DEPTNAME], 
+[DELAY].[device_name] AS [device_name], 
+[DELAY].[pin] AS [pin], 
+[DELAY].[thedate] AS [thedate], 
+[DELAY].[Name] AS [Name], 
+[DELAY].[thetime] AS [thetime], 
+[DELAY].[delayinmin] AS [delayinmin]
+FROM [dbo].[DELAY] AS [DELAY]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="delayZKAccessModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DelayEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="delay_count" ReturnType="Collection(delayZKAccessModel1.delay_count_Result)">
+          <Parameter Name="the_input_date" Mode="In" Type="String" />
+            <Parameter Name="dept" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="DELAYs" EntityType="delayZKAccessModel1.DELAY" />
+          <FunctionImport Name="delayfunc" EntitySet="DELAYs" ReturnType="Collection(delayZKAccessModel1.DELAY)">
+          <Parameter Name="the_input_date" Mode="In" Type="String" />
+            <Parameter Name="dept" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="delay_count_Result">
+          <Property Type="String" Name="pin" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="thedate" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="40" />
+          <Property Type="Time" Name="thetime" Nullable="true" />
+          <Property Type="Int32" Name="delayinmin" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="DELAY">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="pin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="thedate" Type="DateTime" Precision="0" />
+          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="thetime" Type="Time" Precision="7" />
+          <Property Name="delayinmin" Type="Int32" />
+          <Property Name="device_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEPTNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="delayZKAccessModel1StoreContainer" CdmEntityContainer="DelayEntities" >
+          <FunctionImportMapping FunctionImportName="delay_count" FunctionName="delayZKAccessModel1.Store.delay_count">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="delayZKAccessModel1.delay_count_Result">
+                <ScalarProperty Name="pin" ColumnName="pin" />
+                <ScalarProperty Name="thedate" ColumnName="thedate" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="thetime" ColumnName="thetime" />
+                <ScalarProperty Name="delayinmin" ColumnName="delayinmin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="DELAYs">
+            <EntityTypeMapping TypeName="delayZKAccessModel1.DELAY">
+              <MappingFragment StoreEntitySet="DELAY">
+                <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+                <ScalarProperty Name="device_name" ColumnName="device_name" />
+                <ScalarProperty Name="delayinmin" ColumnName="delayinmin" />
+                <ScalarProperty Name="thetime" ColumnName="thetime" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="thedate" ColumnName="thedate" />
+                <ScalarProperty Name="pin" ColumnName="pin" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="delayfunc" FunctionName="delayZKAccessModel1.Store.delay_count" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AttLoginModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cumlative">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="pin" Type="nvarchar" MaxLength="50" />
+    <Property Name="delayinmin" Type="int" />
+    <Property Name="themonth" Type="varchar" MaxLength="12" />
+    <Property Name="theyear" Type="varchar" MaxLength="12" />
+    <Property Name="DEPTNAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="Name" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityContainer Name="AttLoginModel2StoreContainer">
+    <EntitySet Name="cumlative" EntityType="Self.cumlative" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

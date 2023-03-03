@@ -1,0 +1,57 @@
+﻿@model Attendance.Models.othert
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>othert</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.thedate2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.thedate2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.thetime2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.thetime2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pin)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.device_name2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.device_name2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTNAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

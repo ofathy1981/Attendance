@@ -1,0 +1,135 @@
+﻿@model IEnumerable<Attendance.Models.attendancev>
+<style>
+    #preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        background: #fff;
+    }
+
+    #ldr {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+</style>
+
+
+
+<div id="preloader">
+    <img src="~/Images/wait.gif" height="80" width="100" id="ldr" />
+</div>
+@{
+    ViewBag.Title = "نتيجة البحث ";
+}
+
+@{
+    string p1 = (string)System.Web.HttpContext.Current.Session["employeecode1"];
+}
+
+<br />
+<h2>نتيجة البحث</h2>
+@p1 عن تاريخ
+<style>
+    th, td {
+        padding: 15px;
+        text-align: left;
+        font-family: 'Arial Rounded MT';
+        font-weight: 500;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    table {
+        font-size: 14px;
+        border: 1px solid black;
+    }
+</style>
+
+<table class="table table-striped">
+    <tr>
+
+        <th>
+            التاريخ
+        </th>
+        <th>
+            اسم الماكينه
+
+        </th>
+        <th>
+            الكود الوظيفى
+
+        </th>
+        <th>
+            القطاعات
+        </th>
+        <th>
+
+            الوقت
+        </th>
+        <th>
+            الاسم
+        </th>
+
+
+    </tr>
+
+    @foreach (var item in Model.OrderBy(item => item.Name))
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.thedate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.device_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Badgenumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEPTNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.thetime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+        </tr>
+    }
+
+
+</table>
+<script>
+    jQuery(document).ready(function ($) {
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').fadeIn('slow', function () { });
+            }, -200000);
+
+
+
+        });
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').delay(1600).fadeOut('slow', function () { });
+            }, 20);
+
+
+
+        });
+    });
+</script>

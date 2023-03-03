@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="delayZKAccessModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ZKAccess.dbo.DELAY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DELAY">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="DEPTNAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="device_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="pin" Type="nvarchar" MaxLength="50" />
+    <Property Name="thedate" Type="date" />
+    <Property Name="Name" Type="varchar" MaxLength="40" />
+    <Property Name="thetime" Type="time" Precision="7" />
+    <Property Name="delayinmin" Type="int" />
+  </EntityType>
+  <Function Name="delay_count" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="the_input_date" Type="nvarchar" Mode="In" />
+    <Parameter Name="dept" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="delayZKAccessModel1StoreContainer">
+    <EntitySet Name="DELAY" EntityType="Self.DELAY" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[DELAY].[id] AS [id], 
+[DELAY].[DEPTNAME] AS [DEPTNAME], 
+[DELAY].[device_name] AS [device_name], 
+[DELAY].[pin] AS [pin], 
+[DELAY].[thedate] AS [thedate], 
+[DELAY].[Name] AS [Name], 
+[DELAY].[thetime] AS [thetime], 
+[DELAY].[delayinmin] AS [delayinmin]
+FROM [dbo].[DELAY] AS [DELAY]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

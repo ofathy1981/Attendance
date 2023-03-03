@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZKAccessabsenceModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ZKAccessabsenceEntities3" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="absence" ReturnType="Collection(ZKAccessabsenceModel1.absence_Result)">
+      <Parameter Name="the_input_date" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="absence_Result">
+    <Property Type="String" Name="Badgenumber" Nullable="false" MaxLength="24" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="DEPTNAME" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="DEPTID" Nullable="false" />
+  </ComplexType>
+</Schema>

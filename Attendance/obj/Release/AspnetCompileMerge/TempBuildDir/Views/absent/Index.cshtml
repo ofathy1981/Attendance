@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Attendance.Models.absencev>
+
+@{
+    ViewBag.Title = "نتيجة البحث ";
+}
+@{
+    string d1 = (string)System.Web.HttpContext.Current.Session["date1"];
+    string d2 = (string)System.Web.HttpContext.Current.Session["date2"];
+
+}
+@{ int i = 0;}
+
+<center>
+    <h2>    نتيجة البحث عن  غياب الفتره  </h2>
+    <br />       @d2      من         @d1      الى
+
+</center><style>
+    th, td {
+        padding: 15px;
+        text-align: right;
+        font-family: 'Arial Rounded MT';
+        font-weight: 500;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: black;
+        font-style: normal;
+    }
+
+    table {
+        font-size: 20px;
+        border: 1px solid black;
+    }
+</style>
+
+
+
+<table class="table table-striped">
+    <tr style="font-weight:200;color:black">
+        <th>
+            رقم الموظف
+        </th>
+        <th>
+            القطاعات
+        </th>
+        <th>
+            إسم الموظف
+        </th>
+        <th>مسلسل</th>
+
+    </tr>
+
+    @foreach (var item in Model.OrderBy(item => item.DEPTNAME).ThenBy(item => item.Name))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Badgenumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEPTNAME)
+
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+
+
+            </td>
+            <td>@{i++;}@i </td>
+
+        </tr>
+    }
+
+</table>

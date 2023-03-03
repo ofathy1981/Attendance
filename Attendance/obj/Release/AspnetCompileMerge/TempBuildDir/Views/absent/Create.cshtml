@@ -1,0 +1,60 @@
+﻿@model Attendance.Models.absencev
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>absencev</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Badgenumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Badgenumber)
+            @Html.ValidationMessageFor(model => model.Badgenumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DEPTNAME)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DEPTNAME)
+            @Html.ValidationMessageFor(model => model.DEPTNAME)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DEPTID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DEPTID)
+            @Html.ValidationMessageFor(model => model.DEPTID)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

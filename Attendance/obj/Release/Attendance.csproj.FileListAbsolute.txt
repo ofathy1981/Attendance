@@ -1,0 +1,278 @@
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Attendance.dll.config
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Attendance.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Attendance.pdb
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Antlr3.Runtime.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.Core.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\EntityFramework.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\FluentNHibernate.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Iesi.Collections.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Microsoft.Data.Edm.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Microsoft.Data.OData.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Newtonsoft.Json.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\NHibernate.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Net.Http.Formatting.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Spatial.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Helpers.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Http.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Http.OData.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Http.WebHost.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Mvc.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Optimization.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Razor.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.WebPages.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.WebPages.Razor.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\WebGrease.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\WebMatrix.Data.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\WebMatrix.WebData.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Antlr3.Runtime.pdb
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\FluentNHibernate.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Iesi.Collections.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Newtonsoft.Json.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\NHibernate.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\EntityFramework.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Net.Http.Formatting.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Helpers.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Http.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Http.WebHost.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Mvc.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Razor.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.WebPages.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.WebPages.Razor.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\WebMatrix.Data.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\WebMatrix.WebData.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.Core.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Web.Http.OData.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Microsoft.Data.Edm.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\Microsoft.Data.OData.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\System.Spatial.xml
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\de\System.Spatial.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\es\System.Spatial.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\fr\System.Spatial.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\it\System.Spatial.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\ja\System.Spatial.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\ko\System.Spatial.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\ru\System.Spatial.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\obj\Release\Attendance.dll
+C:\Users\ofathy\documents\visual studio 2013\Projects\Attendance\Attendance\obj\Release\Attendance.pdb
+D:\Attendance\Attendance\bin\Attendance.dll.config
+D:\Attendance\Attendance\bin\Attendance.dll
+D:\Attendance\Attendance\bin\Attendance.pdb
+D:\Attendance\Attendance\bin\Antlr3.Runtime.dll
+D:\Attendance\Attendance\bin\DotNetOpenAuth.AspNet.dll
+D:\Attendance\Attendance\bin\DotNetOpenAuth.Core.dll
+D:\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.dll
+D:\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.dll
+D:\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Attendance\Attendance\bin\EntityFramework.dll
+D:\Attendance\Attendance\bin\FluentNHibernate.dll
+D:\Attendance\Attendance\bin\Iesi.Collections.dll
+D:\Attendance\Attendance\bin\Microsoft.Data.Edm.dll
+D:\Attendance\Attendance\bin\Microsoft.Data.OData.dll
+D:\Attendance\Attendance\bin\Microsoft.Web.Infrastructure.dll
+D:\Attendance\Attendance\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Attendance\Attendance\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Attendance\Attendance\bin\Newtonsoft.Json.dll
+D:\Attendance\Attendance\bin\NHibernate.dll
+D:\Attendance\Attendance\bin\System.Net.Http.Formatting.dll
+D:\Attendance\Attendance\bin\System.Spatial.dll
+D:\Attendance\Attendance\bin\System.Web.Helpers.dll
+D:\Attendance\Attendance\bin\System.Web.Http.dll
+D:\Attendance\Attendance\bin\System.Web.Http.OData.dll
+D:\Attendance\Attendance\bin\System.Web.Http.WebHost.dll
+D:\Attendance\Attendance\bin\System.Web.Mvc.dll
+D:\Attendance\Attendance\bin\System.Web.Optimization.dll
+D:\Attendance\Attendance\bin\System.Web.Razor.dll
+D:\Attendance\Attendance\bin\System.Web.WebPages.Deployment.dll
+D:\Attendance\Attendance\bin\System.Web.WebPages.dll
+D:\Attendance\Attendance\bin\System.Web.WebPages.Razor.dll
+D:\Attendance\Attendance\bin\WebGrease.dll
+D:\Attendance\Attendance\bin\WebMatrix.Data.dll
+D:\Attendance\Attendance\bin\WebMatrix.WebData.dll
+D:\Attendance\Attendance\bin\Antlr3.Runtime.pdb
+D:\Attendance\Attendance\bin\FluentNHibernate.xml
+D:\Attendance\Attendance\bin\Iesi.Collections.xml
+D:\Attendance\Attendance\bin\Newtonsoft.Json.xml
+D:\Attendance\Attendance\bin\NHibernate.xml
+D:\Attendance\Attendance\bin\EntityFramework.xml
+D:\Attendance\Attendance\bin\System.Net.Http.Formatting.xml
+D:\Attendance\Attendance\bin\System.Web.Helpers.xml
+D:\Attendance\Attendance\bin\System.Web.Http.xml
+D:\Attendance\Attendance\bin\System.Web.Http.WebHost.xml
+D:\Attendance\Attendance\bin\System.Web.Mvc.xml
+D:\Attendance\Attendance\bin\System.Web.Razor.xml
+D:\Attendance\Attendance\bin\System.Web.WebPages.xml
+D:\Attendance\Attendance\bin\System.Web.WebPages.Deployment.xml
+D:\Attendance\Attendance\bin\System.Web.WebPages.Razor.xml
+D:\Attendance\Attendance\bin\WebMatrix.Data.xml
+D:\Attendance\Attendance\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Attendance\Attendance\bin\WebMatrix.WebData.xml
+D:\Attendance\Attendance\bin\DotNetOpenAuth.AspNet.xml
+D:\Attendance\Attendance\bin\DotNetOpenAuth.Core.xml
+D:\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.xml
+D:\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.xml
+D:\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Attendance\Attendance\bin\System.Web.Http.OData.xml
+D:\Attendance\Attendance\bin\Microsoft.Data.Edm.xml
+D:\Attendance\Attendance\bin\Microsoft.Data.OData.xml
+D:\Attendance\Attendance\bin\System.Spatial.xml
+D:\Attendance\Attendance\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Attendance\Attendance\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Attendance\Attendance\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Attendance\Attendance\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Attendance\Attendance\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Attendance\Attendance\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Attendance\Attendance\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Attendance\Attendance\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Attendance\Attendance\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Attendance\Attendance\bin\de\Microsoft.Data.OData.resources.dll
+D:\Attendance\Attendance\bin\es\Microsoft.Data.OData.resources.dll
+D:\Attendance\Attendance\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Attendance\Attendance\bin\it\Microsoft.Data.OData.resources.dll
+D:\Attendance\Attendance\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Attendance\Attendance\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Attendance\Attendance\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Attendance\Attendance\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Attendance\Attendance\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Attendance\Attendance\bin\de\System.Spatial.resources.dll
+D:\Attendance\Attendance\bin\es\System.Spatial.resources.dll
+D:\Attendance\Attendance\bin\fr\System.Spatial.resources.dll
+D:\Attendance\Attendance\bin\it\System.Spatial.resources.dll
+D:\Attendance\Attendance\bin\ja\System.Spatial.resources.dll
+D:\Attendance\Attendance\bin\ko\System.Spatial.resources.dll
+D:\Attendance\Attendance\bin\ru\System.Spatial.resources.dll
+D:\Attendance\Attendance\bin\zh-Hans\System.Spatial.resources.dll
+D:\Attendance\Attendance\bin\zh-Hant\System.Spatial.resources.dll
+D:\Attendance\Attendance\obj\Release\Attendance.csprojResolveAssemblyReference.cache
+D:\Attendance\Attendance\obj\Release\Attendance.dll
+D:\Attendance\Attendance\obj\Release\Attendance.pdb
+D:\Development\Attendance\Attendance\bin\Attendance.dll.config
+D:\Development\Attendance\Attendance\bin\Attendance.dll
+D:\Development\Attendance\Attendance\bin\Attendance.pdb
+D:\Development\Attendance\Attendance\bin\Antlr3.Runtime.dll
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.AspNet.dll
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.Core.dll
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.dll
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.dll
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Development\Attendance\Attendance\bin\EntityFramework.dll
+D:\Development\Attendance\Attendance\bin\FluentNHibernate.dll
+D:\Development\Attendance\Attendance\bin\Iesi.Collections.dll
+D:\Development\Attendance\Attendance\bin\Microsoft.Data.Edm.dll
+D:\Development\Attendance\Attendance\bin\Microsoft.Data.OData.dll
+D:\Development\Attendance\Attendance\bin\Microsoft.Web.Infrastructure.dll
+D:\Development\Attendance\Attendance\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Development\Attendance\Attendance\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Development\Attendance\Attendance\bin\Newtonsoft.Json.dll
+D:\Development\Attendance\Attendance\bin\NHibernate.dll
+D:\Development\Attendance\Attendance\bin\System.Net.Http.Formatting.dll
+D:\Development\Attendance\Attendance\bin\System.Spatial.dll
+D:\Development\Attendance\Attendance\bin\System.Web.Helpers.dll
+D:\Development\Attendance\Attendance\bin\System.Web.Http.dll
+D:\Development\Attendance\Attendance\bin\System.Web.Http.OData.dll
+D:\Development\Attendance\Attendance\bin\System.Web.Http.WebHost.dll
+D:\Development\Attendance\Attendance\bin\System.Web.Mvc.dll
+D:\Development\Attendance\Attendance\bin\System.Web.Optimization.dll
+D:\Development\Attendance\Attendance\bin\System.Web.Razor.dll
+D:\Development\Attendance\Attendance\bin\System.Web.WebPages.Deployment.dll
+D:\Development\Attendance\Attendance\bin\System.Web.WebPages.dll
+D:\Development\Attendance\Attendance\bin\System.Web.WebPages.Razor.dll
+D:\Development\Attendance\Attendance\bin\WebGrease.dll
+D:\Development\Attendance\Attendance\bin\WebMatrix.Data.dll
+D:\Development\Attendance\Attendance\bin\WebMatrix.WebData.dll
+D:\Development\Attendance\Attendance\bin\Antlr3.Runtime.pdb
+D:\Development\Attendance\Attendance\bin\FluentNHibernate.xml
+D:\Development\Attendance\Attendance\bin\Iesi.Collections.xml
+D:\Development\Attendance\Attendance\bin\Newtonsoft.Json.xml
+D:\Development\Attendance\Attendance\bin\NHibernate.xml
+D:\Development\Attendance\Attendance\bin\EntityFramework.xml
+D:\Development\Attendance\Attendance\bin\System.Net.Http.Formatting.xml
+D:\Development\Attendance\Attendance\bin\System.Web.Helpers.xml
+D:\Development\Attendance\Attendance\bin\System.Web.Http.xml
+D:\Development\Attendance\Attendance\bin\System.Web.Http.WebHost.xml
+D:\Development\Attendance\Attendance\bin\System.Web.Mvc.xml
+D:\Development\Attendance\Attendance\bin\System.Web.Razor.xml
+D:\Development\Attendance\Attendance\bin\System.Web.WebPages.xml
+D:\Development\Attendance\Attendance\bin\System.Web.WebPages.Deployment.xml
+D:\Development\Attendance\Attendance\bin\System.Web.WebPages.Razor.xml
+D:\Development\Attendance\Attendance\bin\WebMatrix.Data.xml
+D:\Development\Attendance\Attendance\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Development\Attendance\Attendance\bin\WebMatrix.WebData.xml
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.AspNet.xml
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.Core.xml
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.OAuth.xml
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.xml
+D:\Development\Attendance\Attendance\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Development\Attendance\Attendance\bin\System.Web.Http.OData.xml
+D:\Development\Attendance\Attendance\bin\Microsoft.Data.Edm.xml
+D:\Development\Attendance\Attendance\bin\Microsoft.Data.OData.xml
+D:\Development\Attendance\Attendance\bin\System.Spatial.xml
+D:\Development\Attendance\Attendance\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Development\Attendance\Attendance\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Development\Attendance\Attendance\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Development\Attendance\Attendance\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Development\Attendance\Attendance\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Development\Attendance\Attendance\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Development\Attendance\Attendance\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Development\Attendance\Attendance\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Development\Attendance\Attendance\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Development\Attendance\Attendance\bin\de\Microsoft.Data.OData.resources.dll
+D:\Development\Attendance\Attendance\bin\es\Microsoft.Data.OData.resources.dll
+D:\Development\Attendance\Attendance\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Development\Attendance\Attendance\bin\it\Microsoft.Data.OData.resources.dll
+D:\Development\Attendance\Attendance\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Development\Attendance\Attendance\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Development\Attendance\Attendance\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Development\Attendance\Attendance\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Development\Attendance\Attendance\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Development\Attendance\Attendance\bin\de\System.Spatial.resources.dll
+D:\Development\Attendance\Attendance\bin\es\System.Spatial.resources.dll
+D:\Development\Attendance\Attendance\bin\fr\System.Spatial.resources.dll
+D:\Development\Attendance\Attendance\bin\it\System.Spatial.resources.dll
+D:\Development\Attendance\Attendance\bin\ja\System.Spatial.resources.dll
+D:\Development\Attendance\Attendance\bin\ko\System.Spatial.resources.dll
+D:\Development\Attendance\Attendance\bin\ru\System.Spatial.resources.dll
+D:\Development\Attendance\Attendance\bin\zh-Hans\System.Spatial.resources.dll
+D:\Development\Attendance\Attendance\bin\zh-Hant\System.Spatial.resources.dll
+D:\Development\Attendance\Attendance\obj\Release\Attendance.csprojResolveAssemblyReference.cache
+D:\Development\Attendance\Attendance\obj\Release\Attendance.dll
+D:\Development\Attendance\Attendance\obj\Release\Attendance.pdb

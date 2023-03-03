@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "SEARCH AND REPORT";
+}
+<h1>البحث باستخدام اسم الماكينه</h1>
+<h2>SEARCH DB</h2>
+@{
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+        {
+            Text = "التوفيقية",
+            Value = "التوفيقية"
+        });
+    listItems.Add(new SelectListItem
+        {
+            Text = "الفوالة_10",
+            Value = "الفوالة_10",
+        });
+    listItems.Add(new SelectListItem
+        {
+            Text = "الفوالة_8",
+            Value = "الفوالة_8"
+        });
+   
+    listItems.Add(new SelectListItem
+    {
+        Text = "جاردن _6",
+        Value =  "جاردن _6"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "جاردن _9",
+        Value = "جاردن _9"
+    });
+   
+    listItems.Add(new SelectListItem
+    {
+        Text = "سيتي بنك",
+        Value = "سيتي بنك"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "قصر النيل",
+        Value = "قصر النيل"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "مهندسين_7",
+        Value = "مهندسين_7"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "مهندسين_8",
+        Value = "مهندسين_8"
+    });
+   
+
+}
+@using (Html.BeginForm("search33", "Attendance"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div>
+      اختار التاريخ  @Html.TextBox("employeecode3", "", new { @autocomplete = "off" })
+        </div>
+
+    <div>
+        اختار اسم الماكينه  @Html.DropDownList("depname", new SelectList(listItems, "Value", "Text"))
+    </div>
+    <div>
+        اسم الماكينه      @Html.TextBox("employeecode32", "", new { @autocomplete = "off" })
+    </div>
+
+
+
+
+
+
+        <input type="submit" value="search" />
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script>
+    $("#employeecode12").val("الأصول والأستثمار");
+
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#employeecode3").datepicker({
+
+            dateFormat: "Mdyy"
+        });
+    });
+</script>
+<script>
+    $('#depname').change(function () {
+        var depname = $('#depname').val();
+        $("#employeecode32").val(depname);
+    });
+
+</script>
+<script>
+    $("#employeecode32").val("التوفيقية");
+</script>

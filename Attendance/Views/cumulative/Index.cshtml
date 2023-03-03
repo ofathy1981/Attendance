@@ -1,0 +1,410 @@
+﻿@model IEnumerable<Attendance.Models.cumlative>
+<style>
+    #preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        background: #fff;
+    }
+
+    #ldr {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+</style>
+<div id="preloader">
+    <img src="~/Images/wait.gif" height="80" width="100" id="ldr" />
+</div>
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    string cod1 = (string)System.Web.HttpContext.Current.Session["code1"];
+    string cod2 = (string)System.Web.HttpContext.Current.Session["code2"];
+    string cod3 = (string)System.Web.HttpContext.Current.Session["code3"];
+
+}
+
+<center><table><tr><td>@cod1</td><td> لقطاعات</td><td>@cod3</td><td>مجمع التاخيرات لشهر</td></tr></table></center>
+
+
+<style>
+    th, td {
+        padding: 15px;
+        text-align: right;
+        font-family: 'Arial Rounded MT';
+        font-weight: 500;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: black;
+        font-style:normal;
+    }
+
+    table {
+        font-size: 20px;
+        border: 1px solid black;
+    }
+    .bog {
+        background-imageurl('@Url.Content("~/Images/X.png")');
+        width: 10%;
+        height: 10%;
+
+    }
+</style>
+@{
+
+    List<string> listItems = new List<string>();
+    listItems.Add("10400");
+    listItems.Add("10435");
+    listItems.Add("10446");
+    listItems.Add("10570");
+    listItems.Add("10604");
+    listItems.Add("10701");
+    listItems.Add("10822");
+    listItems.Add("10832");
+    listItems.Add("10847");
+    listItems.Add("10883");
+    listItems.Add("10950");
+    listItems.Add("10974");
+    listItems.Add("10999");
+    listItems.Add("11001");
+    listItems.Add("11004");
+    listItems.Add("11018");
+    listItems.Add("11103");
+    listItems.Add("11126");
+    listItems.Add("11132");
+    listItems.Add("11136");
+    listItems.Add("11139");
+    listItems.Add("11140");
+    listItems.Add("11141");
+    listItems.Add("11142");
+    listItems.Add("11144");
+    listItems.Add("11145");
+    listItems.Add("11146");
+    listItems.Add("11161");
+    listItems.Add("11164");
+    listItems.Add("11165");
+    listItems.Add("11189");
+    listItems.Add("11229");
+    listItems.Add("11231");
+    listItems.Add("11235");
+    listItems.Add("11237");
+    listItems.Add("11238");
+    listItems.Add("11279");
+    listItems.Add("11287");
+    listItems.Add("11293");
+    listItems.Add("11398");
+    listItems.Add("11399");
+    listItems.Add("11420");
+    listItems.Add("11444");
+    listItems.Add("11493");
+    listItems.Add("11844");
+    listItems.Add("11848");
+    listItems.Add("11875");
+    listItems.Add("11881");
+    listItems.Add("11927");
+    listItems.Add("11932");
+    listItems.Add("12066");
+    listItems.Add("12093");
+    listItems.Add("12225");
+    listItems.Add("12309");
+    listItems.Add("12378");
+    listItems.Add("12821");
+    listItems.Add("10353");
+    listItems.Add("10402");
+    listItems.Add("10405");
+    listItems.Add("10417");
+    listItems.Add("10422");
+    listItems.Add("10447");
+    listItems.Add("10449");
+    listItems.Add("10450");
+    listItems.Add("10462");
+    listItems.Add("10466");
+    listItems.Add("10468");
+    listItems.Add("10555");
+    listItems.Add("10563");
+    listItems.Add("10566");
+    listItems.Add("10615");
+    listItems.Add("10616");
+    listItems.Add("10642");
+    listItems.Add("10644");
+    listItems.Add("10652");
+    listItems.Add("10686");
+    listItems.Add("10689");
+    listItems.Add("10697");
+    listItems.Add("10706");
+    listItems.Add("10710");
+    listItems.Add("10711");
+    listItems.Add("10714");
+    listItems.Add("10817");
+    listItems.Add("10818");
+    listItems.Add("10826");
+    listItems.Add("10828");
+    listItems.Add("10830");
+    listItems.Add("10831");
+    listItems.Add("10835");
+    listItems.Add("10836");
+    listItems.Add("10868");
+    listItems.Add("10869");
+    listItems.Add("10870");
+    listItems.Add("10884");
+    listItems.Add("10944");
+    listItems.Add("10949");
+    listItems.Add("10951");
+    listItems.Add("10952");
+    listItems.Add("10954");
+    listItems.Add("10955");
+    listItems.Add("10973");
+    listItems.Add("10994");
+    listItems.Add("10995");
+    listItems.Add("10996");
+    listItems.Add("11000");
+    listItems.Add("11003");
+    listItems.Add("11005");
+    listItems.Add("11084");
+    listItems.Add("11085");
+    listItems.Add("11086");
+    listItems.Add("11088");
+    listItems.Add("11106");
+    listItems.Add("11127");
+    listItems.Add("11128");
+    listItems.Add("11130");
+    listItems.Add("11135");
+    listItems.Add("11143");
+    listItems.Add("11148");
+    listItems.Add("11162");
+    listItems.Add("11167");
+    listItems.Add("11174");
+    listItems.Add("11176");
+    listItems.Add("11177");
+    listItems.Add("11179");
+    listItems.Add("11185");
+    listItems.Add("11186");
+    listItems.Add("11192");
+    listItems.Add("11195");
+    listItems.Add("11197");
+    listItems.Add("11198");
+    listItems.Add("11224");
+    listItems.Add("11225");
+    listItems.Add("11233");
+    listItems.Add("11248");
+    listItems.Add("11249");
+    listItems.Add("11250");
+    listItems.Add("11280");
+    listItems.Add("11283");
+    listItems.Add("11288");
+    listItems.Add("11289");
+    listItems.Add("11290");
+    listItems.Add("11297");
+    listItems.Add("11315");
+    listItems.Add("11397");
+    listItems.Add("11404");
+    listItems.Add("11406");
+    listItems.Add("11407");
+    listItems.Add("11413");
+    listItems.Add("11416");
+    listItems.Add("11439");
+    listItems.Add("11458");
+    listItems.Add("11489");
+    listItems.Add("11491");
+    listItems.Add("11496");
+    listItems.Add("11538");
+    listItems.Add("11539");
+    listItems.Add("11557");
+    listItems.Add("11840");
+    listItems.Add("11863");
+    listItems.Add("11871");
+    listItems.Add("11882");
+    listItems.Add("11897");
+    listItems.Add("11923");
+    listItems.Add("12013");
+    listItems.Add("12039");
+    listItems.Add("12120");
+    listItems.Add("12161");
+    listItems.Add("12290");
+    listItems.Add("12291");
+    listItems.Add("12295");
+    listItems.Add("12301");
+    listItems.Add("12308");
+    listItems.Add("12329");
+    listItems.Add("12444");
+    listItems.Add("12572");
+    listItems.Add("12650");
+    listItems.Add("12665");
+    listItems.Add("12792");
+    listItems.Add("12823");
+
+
+
+}
+
+@{
+
+    List<string> listItems2 = new List<string>();
+
+	listItems2.Add("0000");
+
+}
+@{ int i = 0;}
+<table class="table table-striped">
+    <tr style="font-weight:200;color:black">
+        <th>
+            ملاحظات
+        </th>
+        <th>
+            خصم الايام
+        </th>
+        <th>
+            مجمع التاخيرات بالدقائق
+        </th>
+
+        <th>
+            الاسم
+        </th>
+        <th>مسلسل</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+
+
+
+            @if (listItems.Contains(item.pin))
+            {
+
+                <td>
+                    <center>وظائف نظيره</center>
+                </td>
+            }
+            else if (listItems2.Contains(item.pin))
+            {
+                <td><center>ضواحى</center></td>
+            }
+            else
+            {
+                <td></td>
+            }
+
+            @if (item.delayinmin >= 60 && item.delayinmin < 120)
+            {
+
+                <td>
+                    <center>خصم يوم </center>
+                </td>
+            }
+            else if (item.delayinmin >= 120 && item.delayinmin < 180 && !listItems2.Contains(item.pin))
+            {
+                <td><center>خصم يومين</center></td>
+            }
+            else if (item.delayinmin >= 180 && item.delayinmin < 240 && !listItems2.Contains(item.pin))
+            {
+                <td><center>خصم ثلاثة ايام</center></td>
+            }
+            else if (item.delayinmin >= 240 && item.delayinmin < 300 && !listItems2.Contains(item.pin))
+            {
+                <td><center>خصم اربع ايام</center></td>
+            }
+            else if (item.delayinmin >= 300 && item.delayinmin < 360 && !listItems2.Contains(item.pin))
+            {
+                <td><center>خصم خمسة ايام </center></td>
+            }
+            else if (item.delayinmin >= 360 && item.delayinmin < 420 && !listItems2.Contains(item.pin))
+            {
+                <td><center> خصم ستة ايام </center></td>
+            }
+            else if (item.delayinmin >= 420 && item.delayinmin < 480 && !listItems2.Contains(item.pin))
+            {
+                <td><center> خصم سبعة ايام  </center></td>
+            }
+            else if (item.delayinmin >= 480 && item.delayinmin < 540 && !listItems2.Contains(item.pin))
+            {
+                <td><center> خصم ثمانية ايام </center></td>
+            }
+            else if (item.delayinmin >= 540 && item.delayinmin < 600 && !listItems2.Contains(item.pin))
+            {
+                <td><center> خصم تسعة ايام  </center></td>
+            }
+            else if (item.delayinmin >= 600 && item.delayinmin < 660 && !listItems2.Contains(item.pin))
+            {
+                <td><center> خصم عشر ايام </center> </td>
+            }
+            else if (item.delayinmin >= 660 && item.delayinmin < 720 && !listItems2.Contains(item.pin))
+            {
+                <td><center>خصم احدعشر يوما </center></td>
+            }
+            else if (item.delayinmin >= 720 && item.delayinmin < 780 && !listItems2.Contains(item.pin))
+            {
+                <td><center> خصم اثناعشر يوما </center>  </td>
+            }
+            else if (item.delayinmin >= 780 && item.delayinmin < 840 && !listItems2.Contains(item.pin))
+            {
+                <td><center> خصم ثلاثة عشر يوما </center></td>
+            }
+            else if (item.delayinmin >= 840 && item.delayinmin < 900 && !listItems2.Contains(item.pin))
+            {
+                <td> <center> خصم اربع عشر يوما   </center> </td>
+            }
+            else if (item.delayinmin == 900)
+            {
+                <td><center> خصم خمسة عشر يوما </center> </td>
+            }
+            else
+            {
+                <td></td>
+            }
+
+
+
+
+
+
+
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.delayinmin)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @{i++;}@i
+            </td>
+        </tr>
+    }
+
+</table>
+<script>
+    jQuery(document).ready(function ($) {
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').fadeIn('slow', function () { });
+            }, -200000);
+
+
+
+        });
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').delay(1600).fadeOut('slow', function () { });
+            }, 20);
+
+
+
+        });
+    });
+</script>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZKAccessModelStoreContainer" CdmEntityContainer="ZKAccessEntities1">
+    <EntitySetMapping Name="attendancevs">
+      <EntityTypeMapping TypeName="ZKAccessModel.attendancev">
+        <MappingFragment StoreEntitySet="attendancev">
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="EMPName" ColumnName="EMPName" />
+          <ScalarProperty Name="SectorName" ColumnName="SectorName" />
+          <ScalarProperty Name="device_name" ColumnName="device_name" />
+          <ScalarProperty Name="atttime" ColumnName="atttime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

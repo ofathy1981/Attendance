@@ -1,0 +1,298 @@
+﻿@model IEnumerable<Attendance.Models.byinterval>
+
+@{
+    ViewBag.Title = "Index";
+}
+@{
+    TimeSpan timelim = TimeSpan.Parse("17:00:00");
+    TimeSpan midnight = TimeSpan.Parse("24:00:00");
+
+
+
+}
+@{var thediff = 15;}
+@{var diff2 = 0;}
+@{var diff1 = 0;}
+
+
+<style>
+    #preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        background: #fff;
+    }
+
+    #ldr {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+</style>
+
+@{ int i = 0;}
+
+<div id="preloader">
+    <img src="~/Images/wait.gif" height="80" width="100" id="ldr" />
+</div>
+@{
+    string frm = (string)System.Web.HttpContext.Current.Session["frominputdate"];
+    string to = (string)System.Web.HttpContext.Current.Session["toinputdate"];
+    string empc = (string)System.Web.HttpContext.Current.Session["empcode"];
+
+
+}
+<center>
+    <h1>
+
+        تقرير الحضور الخاص بقطاع
+        @empc
+
+
+    </h1>
+    <br />
+    <h1>
+        @to                عن الفتره من             @frm           الى
+
+    </h1>
+</center>
+<style>
+    th, td {
+        padding: 2px;
+        text-align: right;
+        font-family: 'Arial Rounded MT';
+        font-weight: 500;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: black;
+        font-style: normal;
+    }
+
+    table {
+        font-size: 20px;
+        border: 1px solid black;
+    }
+</style>
+<table class="table table-striped">
+    <tr >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <th style="width:7px;">
+            Time
+        </th>
+
+
+        <th style="width:7px;">
+            وقت الانصراف
+        </th>
+        <th style="width:7px;">
+            وقت الحضور
+        </th>
+        <th style="width:20px;">
+            ماكينة الانصراف
+        </th>
+        <th style="width:20px;">
+            ماكينة الحضور
+        </th>
+
+        <th style="width:20px;">
+            الاسم
+        </th>
+
+        <th style="width:7px;text-align:right;">
+            تاريخ اليوم
+
+        </th>
+        <th style="width:7px;">اليـــــوم</th>
+
+        <th style ="width:1px;" >ser</th>
+    </tr>
+
+
+
+
+    @foreach (var item in Model.OrderBy(item => item.thedate1 == null ? item.thedate2 : item.thedate1))
+    {
+
+
+
+        //----------------rules for shifts period--------------------------
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //-----------------------------------------------------------End------------------of------------Rules
+       
+            <tr>
+
+
+                <td></td>
+
+
+                @if (item.thetime2 != null && item.thetime1 != null)
+                {
+                    //TimeSpan difference = item.thetime2.item.thetime1;
+                    
+                  diff2 = (int)(item.thetime2.Value.Hours);
+                  diff1 = (int)(item.thetime1.Value.Hours);
+                  thediff = (int)(diff2 - diff1);
+
+                }
+
+
+
+
+
+
+
+
+
+
+          @if (thediff < 1){<td></td>}
+          else 
+          {
+
+            <td style="width:7px;">
+
+                @Html.DisplayFor(modelItem => item.thetime2)
+            </td>
+          }
+                <td>
+                    @Html.DisplayFor(modelItem => item.thetime1)
+                </td>
+                <td width="2%">
+                    @Html.DisplayFor(modelItem => item.device_name2)
+                </td>
+                <td width="2%">
+                    @Html.DisplayFor(modelItem => item.device_name1)
+                    @thediff
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+
+                </td>
+
+                @if (item.thedate1 == null)
+                {
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.thedate2)
+                    </td>
+
+                }
+                else
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.thedate1)
+                    </td>
+                }
+
+                @if ((item.thedate1 != null && item.thedate1.Value.DayOfWeek.ToString() == "Sunday") || (item.thedate1 == null && item.thedate2.Value.DayOfWeek.ToString() == "Sunday"))
+                {
+
+                    <td width="2%"> الاحد </td>                      }
+                else if ((item.thedate1 != null && item.thedate1.Value.DayOfWeek.ToString() == "Monday") || (item.thedate1 == null && item.thedate2.Value.DayOfWeek.ToString() == "Monday"))
+                {
+
+                    <td width="2%"> الاثنين </td>
+                }
+                else if ((item.thedate1 != null && item.thedate1.Value.DayOfWeek.ToString() == "Wednesday") || (item.thedate1 == null && item.thedate2.Value.DayOfWeek.ToString() == "Wednesday"))
+                {
+
+                    <td width="2%">الاربعاء  </td>
+                }
+                else if ((item.thedate1 != null && item.thedate1.Value.DayOfWeek.ToString() == "Thursday") || (item.thedate1 == null && item.thedate2.Value.DayOfWeek.ToString() == "Thursday"))
+                {
+
+                    <td width="2%"> الخميس </td>
+
+                }
+                else if ((item.thedate1 != null && item.thedate1.Value.DayOfWeek.ToString() == "Tuesday") || (item.thedate1 == null && item.thedate2.Value.DayOfWeek.ToString() == "Tuesday"))
+                {
+
+                    <td width="2%"> الثلاثاء </td>
+                }
+                else if ((item.thedate1 != null && item.thedate1.Value.DayOfWeek.ToString() == "Saturday") || (item.thedate1 == null && item.thedate2.Value.DayOfWeek.ToString() == "Saturday"))
+                {
+
+                    <td width="2%"> السبت </td>
+                }
+                else if ((item.thedate1 != null && item.thedate1.Value.DayOfWeek.ToString() == "Friday") || (item.thedate1 == null && item.thedate2.Value.DayOfWeek.ToString() == "Friday"))
+                {
+
+                    <td width="2%"> الجمعة </td>
+
+                }
+
+                <td>  @{i++;}@i </td>
+            </tr>
+            @*if (item.thedate1.DayOfWeek.ToString() == "Thursday")
+                {
+                    <tr><hr size="5px"></hr></tr>
+                }*@
+        
+    }
+
+</table>
+<script>
+    jQuery(document).ready(function ($) {
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').fadeIn('slow', function () { });
+            }, -200000);
+
+
+
+        });
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').delay(1600).fadeOut('slow', function () { });
+            }, 20);
+
+
+
+        });
+    });
+</script>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="delaymodel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ZKAccessEntitiesfordelay" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="delay_count" ReturnType="Collection(delaymodel.delay_count_Result)" />
+  </EntityContainer>
+  <ComplexType Name="delay_count_Result">
+    <Property Type="String" Name="pin" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="thedate" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="40" />
+    <Property Type="Time" Name="thetime" Nullable="true" />
+    <Property Type="Int32" Name="Expr2" Nullable="true" />
+  </ComplexType>
+</Schema>

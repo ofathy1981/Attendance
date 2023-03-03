@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZKAccessModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ZKAccess.dbo.attendancev' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="attendancev">
+    <Key>
+      <PropertyRef Name="Badgenumber" />
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="DEPTID" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="atttime" Type="nvarchar(max)" />
+    <Property Name="device_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="40" />
+    <Property Name="Badgenumber" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="DEPTNAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="DEFAULTDEPTID" Type="int" />
+    <Property Name="Expr1" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="DEPTID" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="thedate" Type="nvarchar(max)" />
+    <Property Name="thetime" Type="time" Precision="7" />
+  </EntityType>
+  <Function Name="absence" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="the_input_date1" Type="nvarchar" Mode="In" />
+    <Parameter Name="the_input_date2" Type="nvarchar" Mode="In" />
+    <Parameter Name="dept" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="ZKAccessModelStoreContainer">
+    <EntitySet Name="attendancev" EntityType="Self.attendancev" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[attendancev].[atttime] AS [atttime], 
+[attendancev].[device_name] AS [device_name], 
+[attendancev].[Name] AS [Name], 
+[attendancev].[Badgenumber] AS [Badgenumber], 
+[attendancev].[DEPTNAME] AS [DEPTNAME], 
+[attendancev].[DEFAULTDEPTID] AS [DEFAULTDEPTID], 
+[attendancev].[Expr1] AS [Expr1], 
+[attendancev].[DEPTID] AS [DEPTID], 
+[attendancev].[id] AS [id], 
+[attendancev].[thedate] AS [thedate], 
+[attendancev].[thetime] AS [thetime]
+FROM [dbo].[attendancev] AS [attendancev]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

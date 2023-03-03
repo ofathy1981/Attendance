@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "SEARCH AND REPORT";
+}
+
+<h2>SEARCH DB</h2>
+
+@using (Html.BeginForm("allattendance", "Attendance"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    <div>
+        اختار التاريخ   @Html.TextBox("attenddate", "", new { @autocomplete = "off" })
+    </div>
+
+
+
+
+
+    <input type="submit" value="search" />
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#attenddate").datepicker({
+
+            dateFormat: "Mdyy"
+        });
+    });
+</script>

@@ -1,0 +1,50 @@
+﻿@model Attendance.Models.DELAY
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>DELAY</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pin)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.thedate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.thedate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.thetime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.thetime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.delayinmin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.delayinmin)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

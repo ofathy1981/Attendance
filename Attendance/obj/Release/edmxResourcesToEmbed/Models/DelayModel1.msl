@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="delayZKAccessModel1StoreContainer" CdmEntityContainer="DelayEntities">
+    <FunctionImportMapping FunctionImportName="delay_count" FunctionName="delayZKAccessModel1.Store.delay_count">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="delayZKAccessModel1.delay_count_Result">
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="thedate" ColumnName="thedate" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="thetime" ColumnName="thetime" />
+          <ScalarProperty Name="delayinmin" ColumnName="delayinmin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="DELAYs">
+      <EntityTypeMapping TypeName="delayZKAccessModel1.DELAY">
+        <MappingFragment StoreEntitySet="DELAY">
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="device_name" ColumnName="device_name" />
+          <ScalarProperty Name="delayinmin" ColumnName="delayinmin" />
+          <ScalarProperty Name="thetime" ColumnName="thetime" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="thedate" ColumnName="thedate" />
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="delayfunc" FunctionName="delayZKAccessModel1.Store.delay_count" />
+  </EntityContainerMapping>
+</Mapping>

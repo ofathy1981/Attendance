@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="attendance1/Attendance" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="attendance1/Attendance/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=192.168.62.97;Initial Catalog=AttLogin;User ID=sa;Password=EG0th!@#" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="DelayEntities-Web.config Connection String" description="" value="metadata=res://*/Models.DelayModel1.csdl|res://*/Models.DelayModel1.ssdl|res://*/Models.DelayModel1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.62.97;initial catalog=ZKAccess;user id=sa;password=EG0th!@#;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DelayEntities']/@connectionString" />
+  </parameter>
+  <parameter name="delayZKAccessEntities3-Web.config Connection String" description="" value="metadata=res://*/Models.delayModel1.csdl|res://*/Models.delayModel1.ssdl|res://*/Models.delayModel1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.62.97;initial catalog=ZKAccess;persist security info=True;user id=sa;password=EG0th!@#;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='delayZKAccessEntities3']/@connectionString" />
+  </parameter>
+  <parameter name="ZKAccessabsenceEntities3-Web.config Connection String" description="" value="metadata=res://*/Models.theabsenceModel1.csdl|res://*/Models.theabsenceModel1.ssdl|res://*/Models.theabsenceModel1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.62.97;initial catalog=ZKAccess;user id=sa;password=EG0th!@#;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ZKAccessabsenceEntities3']/@connectionString" />
+  </parameter>
+  <parameter name="ZKAccessEntities-Web.config Connection String" description="" value="metadata=res://*/Models.Model2.csdl|res://*/Models.Model2.ssdl|res://*/Models.Model2.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.62.97;initial catalog=ZKAccess;user id=sa;password=EG0th!@#;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ZKAccessEntities']/@connectionString" />
+  </parameter>
+  <parameter name="ZKAccessEntities1-Web.config Connection String" description="" value="metadata=res://*/Models.attendance.csdl|res://*/Models.attendance.ssdl|res://*/Models.attendance.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.62.97;initial catalog=ZKAccess;user id=sa;password=EG0th!@#;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ZKAccessEntities1']/@connectionString" />
+  </parameter>
+  <parameter name="ZKAccessEntities2-Web.config Connection String" description="" value="metadata=res://*/Models.AttendanceModel.csdl|res://*/Models.AttendanceModel.ssdl|res://*/Models.AttendanceModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.62.97;initial catalog=ZKAccess;user id=sa;password=EG0th!@#;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ZKAccessEntities2']/@connectionString" />
+  </parameter>
+  <parameter name="ZKAccessEntities3-Web.config Connection String" description="" value="metadata=res://*/Models.delayModel1.csdl|res://*/Models.delayModel1.ssdl|res://*/Models.delayModel1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.62.97;initial catalog=ZKAccess;user id=sa;password=EG0th!@#;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ZKAccessEntities3']/@connectionString" />
+  </parameter>
+  <parameter name="ZKAccessEntitiesdelay-Web.config Connection String" description="" value="metadata=res://*/Models.DelayModel1.csdl|res://*/Models.DelayModel1.ssdl|res://*/Models.DelayModel1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.62.97;initial catalog=ZKAccess;user id=sa;password=EG0th!@#;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ZKAccessEntitiesdelay']/@connectionString" />
+  </parameter>
+  <parameter name="ZKAccessEntitiesforabsence3-Web.config Connection String" description="" value="metadata=res://*/Models.absentModel1.csdl|res://*/Models.absentModel1.ssdl|res://*/Models.absentModel1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.62.97;initial catalog=ZKAccess;user id=sa;password=EG0th!@#;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ZKAccessEntitiesforabsence3']/@connectionString" />
+  </parameter>
+  <parameter name="ZKAccessEntitiesfordelay-Web.config Connection String" description="" value="metadata=res://*/Models.delaymodel.csdl|res://*/Models.delaymodel.ssdl|res://*/Models.delaymodel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.62.97;initial catalog=ZKAccess;user id=sa;password=EG0th!@#;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ofathy\\Documents\\Visual\ Studio\ 2013\\Projects\\Attendance\\Attendance\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ZKAccessEntitiesfordelay']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,57 @@
+﻿@model Attendance.Models.cumlative
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>cumlative</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pin)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.delayinmin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.delayinmin)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.themonth)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.themonth)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.theyear)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.theyear)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTNAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

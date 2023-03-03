@@ -1,0 +1,68 @@
+﻿@model Attendance.Models.attendancev
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>attendancev</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmpID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmpID)
+            @Html.ValidationMessageFor(model => model.EmpID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EMPName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EMPName)
+            @Html.ValidationMessageFor(model => model.EMPName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SectorName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SectorName)
+            @Html.ValidationMessageFor(model => model.SectorName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.device_name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.device_name)
+            @Html.ValidationMessageFor(model => model.device_name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.atttime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.atttime)
+            @Html.ValidationMessageFor(model => model.atttime)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

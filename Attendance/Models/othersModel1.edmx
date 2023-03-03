@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ZKAccessModel22.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="othert">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="thedate2" Type="nvarchar(max)" />
+          <Property Name="thetime2" Type="time" Precision="7" />
+          <Property Name="pin" Type="nvarchar" MaxLength="50" />
+          <Property Name="device_name2" Type="nvarchar" MaxLength="50" />
+          <Property Name="DEPTNAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="Name" Type="varchar" MaxLength="40" />
+          <Property Name="id" Type="bigint" Nullable="false" />
+        </EntityType>
+        <Function Name="getothers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="the_inputdate" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="ZKAccessModel22StoreContainer">
+          <EntitySet Name="othert" EntityType="Self.othert" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZKAccessModel22" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="othert">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="thedate2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="thetime2" Type="Time" Precision="7" />
+          <Property Name="pin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="device_name2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEPTNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="othrZKAccessEntities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="otherts" EntityType="Self.othert" />
+          <FunctionImport Name="getothers" ReturnType="Collection(ZKAccessModel22.getothers_Result)">
+          <Parameter Name="the_inputdate" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getoth" EntitySet="otherts" ReturnType="Collection(ZKAccessModel22.othert)">
+          <Parameter Name="the_inputdate" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="gettheothers" EntitySet="otherts" ReturnType="Collection(ZKAccessModel22.othert)">
+            <Parameter Name="the_inputdate" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="getothers_Result">
+          <Property Type="String" Name="thedate2" Nullable="true" />
+          <Property Type="Time" Name="thetime2" Nullable="true" />
+          <Property Type="String" Name="pin" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="device_name2" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DEPTNAME" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="40" />
+          <Property Type="Int64" Name="id" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZKAccessModel22StoreContainer" CdmEntityContainer="othrZKAccessEntities4">
+          <EntitySetMapping Name="otherts">
+            <EntityTypeMapping TypeName="ZKAccessModel22.othert">
+              <MappingFragment StoreEntitySet="othert">
+                <ScalarProperty Name="thedate2" ColumnName="thedate2" />
+                <ScalarProperty Name="thetime2" ColumnName="thetime2" />
+                <ScalarProperty Name="pin" ColumnName="pin" />
+                <ScalarProperty Name="device_name2" ColumnName="device_name2" />
+                <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="getothers" FunctionName="ZKAccessModel22.Store.getothers">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ZKAccessModel22.getothers_Result">
+                <ScalarProperty Name="thedate2" ColumnName="thedate2" />
+                <ScalarProperty Name="thetime2" ColumnName="thetime2" />
+                <ScalarProperty Name="pin" ColumnName="pin" />
+                <ScalarProperty Name="device_name2" ColumnName="device_name2" />
+                <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getoth" FunctionName="ZKAccessModel22.Store.getothers" />
+          <FunctionImportMapping FunctionImportName="gettheothers" FunctionName="ZKAccessModel22.Store.getothers" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

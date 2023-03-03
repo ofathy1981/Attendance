@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Attendance.Models.othert>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>إستثناءات الحضور والانصراف</h2>
+<style>
+    th, td {
+        padding: 15px;
+        text-align: right;
+        font-family: 'Arial Rounded MT';
+        font-weight: 500;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: black;
+        font-style: normal;
+    }
+
+    table {
+        font-size: 20px;
+        border: 1px solid black;
+    }
+</style>
+
+<table class="table table-striped">
+    <tr style="font-weight:200;color:black">
+        <th>
+التاريخ        </th>
+        <th>
+الوقت        </th>
+        <th>
+الكود الوظيفى        </th>
+        <th>
+الماكينه
+                </th>
+        <th>
+القطاع        </th>
+        <th>
+            الاسم
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.thedate2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.thetime2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.device_name2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEPTNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+        </tr>
+}
+
+</table>

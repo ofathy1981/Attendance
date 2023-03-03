@@ -1,0 +1,237 @@
+﻿@model IEnumerable<Attendance.Models.byinterval>
+
+@{
+    ViewBag.Title = "Index";
+}
+@{var thediff = 15;}
+@{var diff2 = 0;}
+@{var diff1 = 0;}
+<style>
+    #preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        background: #fff;
+    }
+
+    #ldr {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+</style>
+
+
+
+<div id="preloader">
+    <img src="~/Images/wait.gif" height="80" width="100" id="ldr" />
+</div>
+@{
+    string frm = (string)System.Web.HttpContext.Current.Session["frominputdate"];
+    string to = (string)System.Web.HttpContext.Current.Session["toinputdate"];
+    string empc = (string)System.Web.HttpContext.Current.Session["empcode"];
+
+    
+}
+<center>
+    <h1>
+
+        تقرير الحضور الخاص بالموظف
+        @empc
+
+
+    </h1>
+    <br />
+    <h1>
+        @to                عن الفتره من             @frm           الى
+
+    </h1></center>
+<style>
+    th, td {
+        padding: 15px;
+        text-align: right;
+        font-family: 'Arial Rounded MT';
+        font-weight: 500;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: black;
+        font-style: normal;
+    }
+
+    table {
+        font-size: 20px;
+        border: 1px solid black;
+    }
+</style>
+<table class="table table-striped">
+    <tr>
+
+     
+        <th>
+            وقت الانصراف
+        </th>
+        <th>
+            وقت الحضور 
+        </th>
+        <th>
+            ماكينة الانصراف
+        </th>
+        <th>
+            ماكينة الحضور
+        </th>
+        <th>
+            القطاع
+        </th>
+        <th>
+تاريخ اليوم        </th>
+        <th>
+
+الاسم        </th>
+
+    </tr>
+
+    @foreach (var item in Model.OrderBy(item => item.thedate1))
+    {
+        
+                    if (item.thetime2 != null && item.thetime1 != null)
+            {
+                //TimeSpan difference = item.thetime2.item.thetime1;
+
+                diff2 = (int)(item.thetime2.Value.Hours);
+                diff1 = (int)(item.thetime1.Value.Hours);
+                thediff = (int)(diff2 - diff1);
+
+            }
+        if (thediff < 1) { 
+        <tr>
+
+            
+            
+            
+          
+            
+
+                <td style="width:7px;">
+
+                </td>
+            
+ 
+
+            <td>
+                @Html.DisplayFor(modelItem => item.thetime1)
+            </td>
+}
+            <td>
+                @Html.DisplayFor(modelItem => item.device_name2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.device_name1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEPTNAME)
+            </td>
+                @if (item.thedate1 == null)
+                {
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.thedate2)
+                    </td>
+
+                }
+                else
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.thedate1)
+                    </td>
+                }
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+     
+        </tr>
+            
+        
+        
+        
+        }
+        else{
+        <tr>
+
+            
+            
+            
+          
+            
+
+                <td style="width:7px;">
+
+                    @Html.DisplayFor(modelItem => item.thetime2)
+                </td>
+            
+ 
+
+            <td>
+                @Html.DisplayFor(modelItem => item.thetime1)
+            </td>
+}
+            <td>
+                @Html.DisplayFor(modelItem => item.device_name2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.device_name1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEPTNAME)
+            </td>
+                @if (item.thedate1 == null)
+                {
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.thedate2)
+                    </td>
+
+                }
+                else
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.thedate1)
+                    </td>
+                }
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+     
+        </tr>
+    }
+    }
+</table>
+<script>
+    jQuery(document).ready(function ($) {
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').fadeIn('slow', function () { });
+            }, -200000);
+
+
+
+        });
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#preloader').delay(1600).fadeOut('slow', function () { });
+            }, 20);
+
+
+
+        });
+    });
+</script>

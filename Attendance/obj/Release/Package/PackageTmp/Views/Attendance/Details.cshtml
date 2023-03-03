@@ -1,0 +1,71 @@
+﻿@model Attendance.Models.attendancev
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>attendancev</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.atttime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.atttime)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.device_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.device_name)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Badgenumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Badgenumber)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.DEPTNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTNAME)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.DEFAULTDEPTID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEFAULTDEPTID)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Expr1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Expr1)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.DEPTID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTID)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

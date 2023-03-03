@@ -1,0 +1,363 @@
+﻿@{
+    ViewBag.Title = "SEARCH AND REPORT";
+}
+<h2>البحث باستخدام القطاعات</h2>
+
+<h2>SEARCH DB</h2>
+@{
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+        {
+            Text = "الأصول والأستثمار",
+            Value = "الأصول والأستثمار"
+        });
+    listItems.Add(new SelectListItem
+        {
+            Text = "إدارة  الاصول والموازنات",
+            Value = "إدارة  الاصول والموازنات",
+        });
+    listItems.Add(new SelectListItem
+        {
+            Text = "القطاع المالى والمراجعه",
+            Value = "القطاع المالى والمراجعه",
+        });
+    listItems.Add(new SelectListItem
+        {
+            Text = "الشئون الهندسية",
+            Value = "الشئون الهندسية"
+        });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الامن",
+        Value = "الامن"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الخدمات",
+        Value = "الخدمات"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الرقابة الداخلية",
+        Value = "الرقابة الداخلية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الشئون التجارية",
+        Value = "الشئون التجارية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الشئون الطبية",
+        Value = "الشئون الطبية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "المعلومات",
+        Value = "المعلومات"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "AlexHI",
+        Value = "AlexHI"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "EGOTH",
+        Value = "EGOTH"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "ادارة الشركة والمتابعة",
+        Value = "ادارة الشركة والمتابعة"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "التدريب والمعاهد",
+        Value = "التدريب والمعاهد"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الجراج",
+        Value = "الجراج"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الرقابة على الفنادق",
+        Value = "الرقابة على الفنادق"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "الشئون الادارية",
+        Value = "الشئون الادارية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "العلاقات العامة",
+        Value = "العلاقات العام"
+    });
+
+    listItems.Add(new SelectListItem
+    {
+        Text = "القانونى & العقود والشهر",
+        Value = "القانونى & العقود والشهر"
+    });
+
+    listItems.Add(new SelectListItem
+    {
+        Text = "القانونى&القضاياوالتنفيذ",
+        Value = "القانونى&القضاياوالتنفيذ"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "معاونى الخدمة",
+        Value = "معاونى الخدمة"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "معهد الأسكندرية",
+        Value = "معهد الأسكندرية"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "معهد الاقصر",
+        Value = "معهد الاقصر"
+    });
+		listItems.Add(new SelectListItem
+    {
+        Text = "منطقة الاقصر",
+        Value = "منطقة الاقصر"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "التخطيط والدراسات الاقتصادية",
+        Value = "التخطيط والدراسات الاقتصادية"
+    });
+
+		 listItems.Add(new SelectListItem
+	    {
+        Text = "الأسكندرية -القصر",
+        Value = "الأسكندرية -القصر"
+    });
+
+		listItems.Add(new SelectListItem
+	    {
+        Text = "معهد الاسكندرية",
+        Value = "معهد الاسكندرية"
+    });
+
+		listItems.Add(new SelectListItem
+	    {
+        Text = "أمن الأسكندرية",
+        Value = "أمن الأسكندرية"
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    List<SelectListItem> monthes = new List<SelectListItem>();
+    monthes.Add(new SelectListItem
+        {
+            Text = "1",
+            Value = "1"
+        });
+    monthes.Add(new SelectListItem
+        {
+            Text = "2",
+            Value = "2",
+        });
+    monthes.Add(new SelectListItem
+        {
+            Text = "3",
+            Value = "3"
+        });
+    monthes.Add(new SelectListItem
+    {
+        Text = "4",
+        Value = "4"
+    });
+    monthes.Add(new SelectListItem
+    {
+        Text = "5",
+        Value = "5"
+    });
+    monthes.Add(new SelectListItem
+    {
+        Text = "6",
+        Value = "6"
+    });
+    monthes.Add(new SelectListItem
+    {
+        Text = "7",
+        Value = "7"
+    });
+    monthes.Add(new SelectListItem
+    {
+        Text = "8",
+        Value = "8"
+    });
+    monthes.Add(new SelectListItem
+    {
+        Text = "9",
+        Value = "9"
+    });
+    monthes.Add(new SelectListItem
+    {
+        Text = "10",
+        Value = "10"
+    });
+    monthes.Add(new SelectListItem
+    {
+        Text = "11",
+        Value = "11"
+    });
+    monthes.Add(new SelectListItem
+    {
+        Text = "12",
+        Value = "12"
+    });
+
+
+
+
+
+
+    List<SelectListItem> years = new List<SelectListItem>();
+    years.Add(new SelectListItem
+        {
+            Text = "2016",
+            Value = "2016"
+        });
+    years.Add(new SelectListItem
+    {
+        Text = "2017",
+        Value = "2017"
+    });
+    years.Add(new SelectListItem
+    {
+        Text = "2018",
+        Value = "2018"
+
+    });
+
+    years.Add(new SelectListItem
+    {
+        Text = "2019",
+        Value = "2019"
+
+    });
+
+    years.Add(new SelectListItem
+    {
+        Text = "2020",
+        Value = "2020"
+
+    });
+
+    years.Add(new SelectListItem
+    {
+        Text = "2021",
+        Value = "2021"
+
+    });
+
+    years.Add(new SelectListItem
+    {
+        Text = "2022",
+        Value = "2022"
+
+    });
+
+    years.Add(new SelectListItem
+    {
+        Text = "2016",
+        Value = "2016"
+
+    });
+
+    years.Add(new SelectListItem
+    {
+        Text = "2016",
+        Value = "2016"
+
+    });
+
+    years.Add(new SelectListItem
+    {
+        Text = "2016",
+        Value = "2016"
+
+    });
+       
+    
+}
+@using (Html.BeginForm("searchcumu","cumulative"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div>
+        ادخل السنه     @Html.TextBox("code2", "", new { @autocomplete = "off" })
+    </div>
+    
+    <div>
+          ادخل الشهر    @Html.TextBox("code3", "", new { @autocomplete = "off" })
+    </div>
+
+    <div>
+        القطاعات التى تم اختيارها   @Html.DropDownList("depname", new SelectList(listItems, "Value", "Text"))
+    </div>
+    <div>
+        اختار القطاعات  @Html.TextBox("code1", "", new { @autocomplete = "off", @val ="" })
+    </div>
+
+
+
+
+
+
+    <input type="submit" value="search" />
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#employeecode1").datepicker({
+
+            dateFormat: "yy-mm-dd"
+        });
+    });
+</script>
+<script>
+    $('#depname').focus(function () {
+        var depname = $('#depname').val();
+        $("#code1").val(depname);
+    });
+    $('#depname').change(function () {
+        var depname = $('#depname').val();
+        $("#code1").val(depname);
+    });
+</script>
+<script>
+    $("#code1").val("");
+
+
+</script>

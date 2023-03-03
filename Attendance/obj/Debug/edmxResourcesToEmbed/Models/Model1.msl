@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZKAccessModelStoreContainer" CdmEntityContainer="ZKAccessEntities">
+    <EntitySetMapping Name="test1">
+      <EntityTypeMapping TypeName="ZKAccessModel.test1">
+        <MappingFragment StoreEntitySet="test1">
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="pin" ColumnName="pin" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

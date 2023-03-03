@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZKAccessModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ZKAccess.dbo.test1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="test1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="time" Type="char" MaxLength="50" />
+    <Property Name="pin" Type="nvarchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ZKAccessModelStoreContainer">
+    <EntitySet Name="test1" EntityType="Self.test1" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[test1].[time] AS [time], 
+[test1].[pin] AS [pin], 
+[test1].[id] AS [id]
+FROM [dbo].[test1] AS [test1]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

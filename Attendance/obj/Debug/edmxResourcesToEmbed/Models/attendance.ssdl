@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZKAccessModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ZKAccess.dbo.attendancev' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="attendancev">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="EMPName" Type="varchar" MaxLength="40" />
+    <Property Name="SectorName" Type="nvarchar" MaxLength="30" />
+    <Property Name="device_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="atttime" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="ZKAccessModelStoreContainer">
+    <EntitySet Name="attendancev" EntityType="Self.attendancev" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[attendancev].[EmpID] AS [EmpID], 
+[attendancev].[EMPName] AS [EMPName], 
+[attendancev].[SectorName] AS [SectorName], 
+[attendancev].[device_name] AS [device_name], 
+[attendancev].[atttime] AS [atttime]
+FROM [dbo].[attendancev] AS [attendancev]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

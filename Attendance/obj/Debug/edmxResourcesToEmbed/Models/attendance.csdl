@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZKAccessModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="attendancev">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMPName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SectorName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="device_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="atttime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ZKAccessEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="attendancevs" EntityType="Self.attendancev" />
+  </EntityContainer>
+</Schema>
